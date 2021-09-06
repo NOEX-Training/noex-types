@@ -1,0 +1,16 @@
+{
+  "name": "noex-types",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "https://github.com/dancixx/-types-noex",
+  "author": "Daniel Boros",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@firebase/firestore-types": "^2.5.0",
+    "@types/react-native": "^0.64.14"
+  },
+  "dependencies": {
+    "@react-native-firebase/remote-config": "^12.7.5"
+  }
+}
