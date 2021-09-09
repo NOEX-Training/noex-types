@@ -60,6 +60,7 @@ declare module 'noex-types' {
                 nanoseconds: number;
                 seconds: number;
             };
+            description?: string;
             order: number;
             sectionTitle: string;
             uid: string;

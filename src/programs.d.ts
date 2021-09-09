@@ -85,6 +85,7 @@ declare module 'noex-types' {
                 nanoseconds: number;
                 seconds: number;
             };
+            description?: string;
             order: number;
             programSectionVideoUrls: Asset;
             programUid: string;
