@@ -6,11 +6,15 @@
   "author": "Daniel Boros",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "prettier": "prettier --single-quote --trailing-comma all --print-width 200 --tab-width 4 --write src/**/*.ts"
+  },
   "devDependencies": {
     "@firebase/firestore-types": "^2.5.0",
     "@types/react-native": "^0.64.14"
   },
   "dependencies": {
-    "@react-native-firebase/remote-config": "^12.7.5"
+    "@react-native-firebase/remote-config": "^12.7.5",
+    "prettier": "^2.4.0"
   }
 }
