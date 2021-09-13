@@ -5,7 +5,7 @@ import { FirebaseRemoteConfigTypes } from '@react-native-firebase/remote-config'
  * Firebase remoteConfig object.
  */
 
-interface RemoteConfigStateProps {
+export interface RemoteConfigStateProps {
     awesome_new_feature: FirebaseRemoteConfigTypes.ConfigValue;
     guidesStaticHeader: FirebaseRemoteConfigTypes.ConfigValue;
     guidesStaticHeader_en: FirebaseRemoteConfigTypes.ConfigValue;

@@ -2,7 +2,7 @@
  * @description
  * IAP response object.
  */
-interface IAPPurchase {
+export interface IAPPurchase {
     createdDate: string;
     data: {
         /**

@@ -1,8 +1,11 @@
+import { Exercise } from "./exercises";
+import { Asset } from "./files";
+
 /**
  * @description
  * Workout/Exercise/Set object.
  */
-interface WorkoutExerciseSet {
+export interface WorkoutExerciseSet {
     checked: boolean;
     duration?: number | string;
     isMetric?: boolean;
@@ -15,7 +18,7 @@ interface WorkoutExerciseSet {
     weight?: number | string;
 }
 
-interface WorkoutExercise extends Exercise {
+export interface WorkoutExercise extends Exercise {
     exerciseNote?: string;
     exerciseSets?: Array<WorkoutExerciseSet>;
     isExerciseMetric?: boolean;
@@ -27,7 +30,7 @@ interface WorkoutExercise extends Exercise {
     youtubeLink: string;
 }
 
-interface Workout {
+export interface Workout {
     blueprintTag: string;
     categoryUid?: string;
     createdBy: string;
@@ -57,7 +60,7 @@ interface Workout {
     youtubeLink: string;
 }
 
-interface WorkoutHistory extends Omit<Workout, 'exercises'> {
+export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     exercises: Array<WorkoutExercise>;
     isTemplate: boolean;
     originalWorkoutUid: string;
@@ -66,7 +69,7 @@ interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     performanceRateValue: number;
 }
 
-interface Dmg {
+export interface Dmg {
     dmgAbs: number;
     dmgAdductor: number;
     dmgAbductor: number;
@@ -91,7 +94,7 @@ interface Dmg {
     dmgUpperChest: number;
 }
 
-interface WorkoutRating {
+export interface WorkoutRating {
     creationDate: {
         nanoseconds: number;
         seconds: number;

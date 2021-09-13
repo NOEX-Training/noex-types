@@ -1,4 +1,4 @@
-interface Citation {
+export interface Citation {
     creationDate: {
         nanoseconds: number;
         seconds: number;

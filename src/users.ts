@@ -1,8 +1,10 @@
+import { Workout } from "./workouts";
+
 /**
  * @description
  * User object.
  */
-interface User {
+export interface User {
     banned: boolean;
     birthday: {
         nanoseconds: number;
@@ -108,7 +110,7 @@ interface User {
     weight: number;
 }
 
-interface UserWorkoutsSection {
+export interface UserWorkoutsSection {
     createdBy: string;
     creationDate: {
         nanoseconds: number;
@@ -120,12 +122,12 @@ interface UserWorkoutsSection {
     userUid: string;
 }
 
-interface UserSectionWithWorkouts extends UserWorkoutsSection {
+export interface UserSectionWithWorkouts extends UserWorkoutsSection {
     workouts: Array<Workout>;
 }
 
 /**@deprecated */
-interface UserWorkoutCategorySectionWorkouts {
+export interface UserWorkoutCategorySectionWorkouts {
     isTeamCategory?: boolean;
     title: string;
     link?: string;
@@ -133,7 +135,7 @@ interface UserWorkoutCategorySectionWorkouts {
 }
 
 // teams
-interface UserTeam {
+export interface UserTeam {
     connectionDate: {
         nanoseconds: number;
         seconds: number;

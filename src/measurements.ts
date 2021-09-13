@@ -1,10 +1,10 @@
-interface Weight {
+export interface Weight {
     key: string;
     value: number;
     text: string;
 }
 
-interface MeasurementState {
+export interface MeasurementState {
     neck: string;
     shoulder: string;
     rightBiceps: string;
@@ -23,7 +23,7 @@ interface MeasurementState {
     leftCalf: string;
 }
 
-interface WeightLogData {
+export interface WeightLogData {
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -40,7 +40,7 @@ interface WeightLogData {
     weightMetric?: number;
 }
 
-interface Height {
+export interface Height {
     key: string;
     value: number;
     text: string;
@@ -52,7 +52,7 @@ export enum PhotoTypes {
     side = 'side',
 }
 
-interface PhotoData {
+export interface PhotoData {
     downloadURL: string;
     fileData: {
         contentType: string;

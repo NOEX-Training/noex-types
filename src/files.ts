@@ -2,7 +2,7 @@
  * @description
  * Uploaded file object.
  */
-interface Asset {
+export interface Asset {
     downloadURL: string;
     fileData: {
         bucket: string;
@@ -28,7 +28,7 @@ interface Asset {
  * @description
  * Trainer file object.
  */
-interface TrainerFile {
+export interface TrainerFile {
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -46,7 +46,7 @@ interface TrainerFile {
  * @description
  * Uploaded file object in team.
  */
-interface TeamFile {
+export interface TeamFile {
     downloadURL: string;
     fileData: {
         contentType: string;
@@ -65,7 +65,7 @@ interface TeamFile {
     };
 }
 
-interface WorkoutSummaryImage {
+export interface WorkoutSummaryImage {
     creationDate: {
         nanosecond: number;
         seconds: number;

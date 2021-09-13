@@ -1,6 +1,6 @@
 import { ImageRequireSource } from 'react-native';
 
-interface Filter {
+export interface Filter {
     idx?: string;
     key: string;
     text: string;
@@ -10,7 +10,7 @@ interface Filter {
     empty?: boolean;
 }
 
-interface FilterTag {
+export interface FilterTag {
     title: string;
     data: Array<Filter>;
 }

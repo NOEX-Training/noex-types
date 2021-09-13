@@ -1,4 +1,7 @@
-interface WorkoutCategory {
+import { Asset } from "./files";
+import { Workout } from "./workouts";
+
+export interface WorkoutCategory {
     categoryTitle: string;
     creationDate: {
         nanoseconds: number;
@@ -13,7 +16,7 @@ interface WorkoutCategory {
 }
 
 // ez kompatibilis a user-sectionnel is
-interface WorkoutCategorySection {
+export interface WorkoutCategorySection {
     categoryTitle: string;
     categoryUid: string;
     createdBy: string;
@@ -29,11 +32,11 @@ interface WorkoutCategorySection {
     womanCover: Asset;
 }
 
-interface WorkoutCategorySectionWithWorkouts extends WorkoutCategorySection {
+export interface WorkoutCategorySectionWithWorkouts extends WorkoutCategorySection {
     workouts: Array<Workout>;
 }
 
-interface WorkoutCategorySectionWorkouts {
+export interface WorkoutCategorySectionWorkouts {
     isTeamCategory?: boolean;
     title: string;
     link: string;

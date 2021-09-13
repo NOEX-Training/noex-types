@@ -1,8 +1,11 @@
+import { Asset } from "./files";
+import { WorkoutExerciseSet } from "./workouts";
+
 /**
  * @description
  * The Exercise object.
  */
-interface Exercise {
+export interface Exercise {
     creationDate: {
         seconds: number;
         nanoseconds: number;
@@ -70,7 +73,7 @@ interface Exercise {
     }>;
 }
 
-interface ExerciseDescriptionElement {
+export interface ExerciseDescriptionElement {
     type: 'text' | 'richText' | 'youtubeLink' | 'fileUploader' | 'textUrl';
     title: string;
     id: string;
@@ -86,7 +89,7 @@ interface ExerciseDescriptionElement {
  * @description
  * Exercise-History object.
  */
-interface ExerciseHistory {
+export interface ExerciseHistory {
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -102,7 +105,7 @@ interface ExerciseHistory {
  * @description
  * Attached youtube link object.
  */
-interface ExerciseYoutubeLink {
+export interface ExerciseYoutubeLink {
     link: string;
     start: string;
 }

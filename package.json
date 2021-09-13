@@ -16,5 +16,6 @@
   "dependencies": {
     "@react-native-firebase/remote-config": "^12.7.5",
     "prettier": "^2.4.0"
-  }
+  },
+  "types": "./dist/index.d.ts"
 }

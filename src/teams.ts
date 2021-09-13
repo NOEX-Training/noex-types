@@ -1,4 +1,7 @@
-interface Team {
+import { Asset, TeamFile } from "./files";
+import { Workout } from "./workouts";
+
+export interface Team {
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -50,9 +53,9 @@ interface Team {
     uid: string;
 }
 
-interface TeamWorkout extends Workout {}
+export interface TeamWorkout extends Workout {}
 
-interface TeamWorkoutSection {
+export interface TeamWorkoutSection {
     createdBy: string;
     creationDate: {
         nanoseconds: number;
@@ -66,7 +69,7 @@ interface TeamWorkoutSection {
 }
 
 /**@deprecated */
-interface TrainerPost {
+export interface TrainerPost {
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -89,7 +92,7 @@ interface TrainerPost {
     youtubeLink: string | null;
 }
 /**@deprecated */
-interface TrainerComment {
+export interface TrainerComment {
     comment: string;
     creationDate: {
         nanoseconds: number;
@@ -107,7 +110,7 @@ interface TrainerComment {
     userUid: string;
 }
 /**@deprecated */
-interface TrainerReply {
+export interface TrainerReply {
     commentUid: string;
     creationDate: {
         nanoseconds: number;
@@ -131,17 +134,17 @@ interface TrainerReply {
     userUid: string;
 }
 
-interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> {}
-interface QuestionComment extends TrainerComment {}
-interface QuestionReply extends TrainerReply {}
+export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> {}
+export interface QuestionComment extends TrainerComment {}
+export interface QuestionReply extends TrainerReply {}
 /**@deprecated */
-interface UserFeedPost extends TrainerPost {}
+export interface UserFeedPost extends TrainerPost {}
 /**@deprecated */
-interface UserFeedComment extends TrainerComment {}
+export interface UserFeedComment extends TrainerComment {}
 /**@deprecated */
-interface UserFeedReply extends TrainerReply {}
+export interface UserFeedReply extends TrainerReply {}
 
-interface GiphyResponse {
+export interface GiphyResponse {
     data: Array<Gifs>;
     meta: {
         msg: string;
@@ -155,7 +158,7 @@ interface GiphyResponse {
     };
 }
 
-interface Gifs {
+export interface Gifs {
     analytics: {
         onclick: {
             url: string;

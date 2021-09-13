@@ -2,7 +2,7 @@
  * @description
  * Chart datapoints object.
  */
-interface ChartData {
+export interface ChartData {
     x: number;
     y: number;
 }

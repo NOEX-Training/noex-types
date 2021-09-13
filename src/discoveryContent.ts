@@ -1,8 +1,10 @@
+import { Asset } from "./files";
+
 /**
  * @description
  * Discovery Tile object.
  */
-interface DiscoveryContent {
+export interface DiscoveryContent {
     creationDate: {
         nanoseconds: number;
         seconds: number;

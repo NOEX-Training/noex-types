@@ -1,6 +1,8 @@
 import { DocumentReference } from '@firebase/firestore-types';
+import { Asset } from './files';
+import { Workout } from './workouts';
 
-interface Program {
+export interface Program {
     createdBy: string;
     creationDate: {
         nanoseconds: number;
@@ -33,7 +35,7 @@ interface Program {
     uid: string;
 }
 
-interface UserProgram extends Program {
+export interface UserProgram extends Program {
     doneWorkouts: Array<{
         creationDate: {
             nanoseconds: number;
@@ -53,11 +55,11 @@ interface UserProgram extends Program {
     reference: DocumentReference;
 }
 
-interface ProgramWithSections extends Program {
+export interface ProgramWithSections extends Program {
     programSections?: Array<ProgramSection>;
 }
 
-interface ProgramWorkout extends Workout {
+export interface ProgramWorkout extends Workout {
     doneWorkouts?: Array<{
         creationDate: {
             nanoseconds: number;
@@ -97,7 +99,7 @@ interface ProgramWorkout extends Workout {
     }>;
 }
 
-interface ProgramSection {
+export interface ProgramSection {
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -122,12 +124,12 @@ interface ProgramSection {
     userUid: string;
 }
 
-interface ProgramSectionWithWorkouts extends ProgramSection {
+export interface ProgramSectionWithWorkouts extends ProgramSection {
     workouts: Array<ProgramWorkout>;
 }
 
 /**@deprecated */
-interface Tier {
+export interface Tier {
     key: number;
     title: string;
     programs: Array<Program>;
