@@ -1,6 +1,5 @@
 import { Asset, TeamFile } from './files';
 import { Workout } from './workouts';
-
 export interface Team {
     creationDate: {
         nanoseconds: number;
@@ -52,9 +51,8 @@ export interface Team {
     trainerUid: string;
     uid: string;
 }
-
-export interface TeamWorkout extends Workout {}
-
+export interface TeamWorkout extends Workout {
+}
 export interface TeamWorkoutSection {
     createdBy: string;
     creationDate: {
@@ -67,7 +65,6 @@ export interface TeamWorkoutSection {
     uid: string;
     userUid: string;
 }
-
 /**@deprecated */
 export interface TrainerPost {
     creationDate: {
@@ -117,13 +114,11 @@ export interface TrainerReply {
         seconds: number;
     };
     likes?: string[];
-    reply:
-        | {
-              reply: string;
-              toUserName: string;
-              toUserUid: string;
-          }
-        | string;
+    reply: {
+        reply: string;
+        toUserName: string;
+        toUserUid: string;
+    } | string;
     sharedCameraPhoto: TeamFile | null;
     sharedMedia: TeamFile | null;
     teamUid: string;
@@ -133,17 +128,21 @@ export interface TrainerReply {
     userProfilePicture: string | null;
     userUid: string;
 }
-
-export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> {}
-export interface QuestionComment extends TrainerComment {}
-export interface QuestionReply extends TrainerReply {}
+export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> {
+}
+export interface QuestionComment extends TrainerComment {
+}
+export interface QuestionReply extends TrainerReply {
+}
 /**@deprecated */
-export interface UserFeedPost extends TrainerPost {}
+export interface UserFeedPost extends TrainerPost {
+}
 /**@deprecated */
-export interface UserFeedComment extends TrainerComment {}
+export interface UserFeedComment extends TrainerComment {
+}
 /**@deprecated */
-export interface UserFeedReply extends TrainerReply {}
-
+export interface UserFeedReply extends TrainerReply {
+}
 export interface GiphyResponse {
     data: Array<Gifs>;
     meta: {
@@ -157,7 +156,6 @@ export interface GiphyResponse {
         total_count: number;
     };
 }
-
 export interface Gifs {
     analytics: {
         onclick: {

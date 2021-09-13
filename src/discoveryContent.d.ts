@@ -1,5 +1,4 @@
 import { Asset } from './files';
-
 /**
  * @description
  * Discovery Tile object.

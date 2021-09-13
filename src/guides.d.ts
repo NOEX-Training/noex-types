@@ -1,5 +1,4 @@
 import { Asset } from './files';
-
 export interface Guide {
     createdBy: string;
     creationDate: {
@@ -33,7 +32,6 @@ export interface Guide {
     uid: string;
     userUid: string;
 }
-
 export interface GuidesSection {
     createdBy: string;
     creationDate: {
@@ -47,7 +45,6 @@ export interface GuidesSection {
     uid: string;
     userUid: string;
 }
-
 export interface GuideElement {
     type: 'text' | 'richText' | 'youtubeLink' | 'fileUploader' | 'textUrl';
     title: string;
@@ -59,12 +56,10 @@ export interface GuideElement {
     youtubeLinks?: Array<GuideYoutubeLink>;
     images?: Array<Asset>;
 }
-
 export interface GuideYoutubeLink {
     link: string;
     start: string;
 }
-
 export interface GlobalGuideTrainerComment {
     creationDate: {
         nanoseconds: number;

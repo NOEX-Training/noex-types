@@ -1,5 +1,4 @@
 import { Workout } from './workouts';
-
 /**
  * @description
  * User object.
@@ -109,7 +108,6 @@ export interface User {
     uid: string;
     weight: number;
 }
-
 export interface UserWorkoutsSection {
     createdBy: string;
     creationDate: {
@@ -121,11 +119,9 @@ export interface UserWorkoutsSection {
     uid: string;
     userUid: string;
 }
-
 export interface UserSectionWithWorkouts extends UserWorkoutsSection {
     workouts: Array<Workout>;
 }
-
 /**@deprecated */
 export interface UserWorkoutCategorySectionWorkouts {
     isTeamCategory?: boolean;
@@ -133,8 +129,6 @@ export interface UserWorkoutCategorySectionWorkouts {
     link?: string;
     data: Array<UserSectionWithWorkouts>;
 }
-
-// teams
 export interface UserTeam {
     connectionDate: {
         nanoseconds: number;

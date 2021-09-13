@@ -14,5 +14,4 @@ import * as Teams from './src/teams';
 import * as Users from './src/users';
 import * as WorkoutCategories from './src/workoutCategories';
 import * as Workouts from './src/workouts';
-
 export { Citation, DiscoveryContent, Exercises, Files, Filter, Guides, Measurements, Payments, Programs, RemoteConfig, Statistics, Store, Teams, Users, WorkoutCategories, Workouts };

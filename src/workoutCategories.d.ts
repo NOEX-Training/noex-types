@@ -1,6 +1,5 @@
 import { Asset } from './files';
 import { Workout } from './workouts';
-
 export interface WorkoutCategory {
     categoryTitle: string;
     creationDate: {
@@ -14,8 +13,6 @@ export interface WorkoutCategory {
     uid: string;
     userUid: string;
 }
-
-// ez kompatibilis a user-sectionnel is
 export interface WorkoutCategorySection {
     categoryTitle: string;
     categoryUid: string;
@@ -31,11 +28,9 @@ export interface WorkoutCategorySection {
     userUid: string;
     womanCover: Asset;
 }
-
 export interface WorkoutCategorySectionWithWorkouts extends WorkoutCategorySection {
     workouts: Array<Workout>;
 }
-
 export interface WorkoutCategorySectionWorkouts {
     isTeamCategory?: boolean;
     title: string;

@@ -1,6 +1,5 @@
 import { Asset } from './files';
 import { WorkoutExerciseSet } from './workouts';
-
 /**
  * @description
  * The Exercise object.
@@ -72,7 +71,6 @@ export interface Exercise {
         start?: string;
     }>;
 }
-
 export interface ExerciseDescriptionElement {
     type: 'text' | 'richText' | 'youtubeLink' | 'fileUploader' | 'textUrl';
     title: string;
@@ -84,7 +82,6 @@ export interface ExerciseDescriptionElement {
     youtubeLinks?: Array<ExerciseYoutubeLink>;
     images?: Array<Asset>;
 }
-
 /**
  * @description
  * Exercise-History object.
@@ -100,7 +97,6 @@ export interface ExerciseHistory {
     userUid: string;
     workoutUid: string;
 }
-
 /**
  * @description
  * Attached youtube link object.

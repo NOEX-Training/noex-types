@@ -1,6 +1,5 @@
 import { Exercise } from './exercises';
 import { Asset } from './files';
-
 /**
  * @description
  * Workout/Exercise/Set object.
@@ -17,7 +16,6 @@ export interface WorkoutExerciseSet {
     status: 'S' | 'F' | 'D' | 'W' | 'T' | 'P' | 'RP';
     weight?: number | string;
 }
-
 export interface WorkoutExercise extends Exercise {
     exerciseNote?: string;
     exerciseSets?: Array<WorkoutExerciseSet>;
@@ -29,7 +27,6 @@ export interface WorkoutExercise extends Exercise {
     trainerNote?: string;
     youtubeLink: string;
 }
-
 export interface Workout {
     blueprintTag: string;
     categoryUid?: string;
@@ -59,7 +56,6 @@ export interface Workout {
     workoutType?: string;
     youtubeLink: string;
 }
-
 export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     exercises: Array<WorkoutExercise>;
     isTemplate: boolean;
@@ -68,7 +64,6 @@ export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     start: number;
     performanceRateValue: number;
 }
-
 export interface Dmg {
     dmgAbs: number;
     dmgAdductor: number;
@@ -93,7 +88,6 @@ export interface Dmg {
     dmgUpperBack: number;
     dmgUpperChest: number;
 }
-
 export interface WorkoutRating {
     creationDate: {
         nanoseconds: number;
