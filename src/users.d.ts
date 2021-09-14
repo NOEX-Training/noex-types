@@ -85,9 +85,35 @@ export interface User {
     muscleGainValue: number;
     name: string;
     statistics?: {
+        /**
+         * @description
+         * In steps.
+         */
         activityGoal?: number;
+        /**
+         * @description
+         * In kCal.
+         */
         caloriesGoal?: number;
+        /**
+         * @description
+         * activity multiplier for calorie calulation
+         */
+        dailyActivityPAL: number;
+        /**
+         * @description
+         * daily calorie deficit or sufficit for calorie calculation
+         */
+        nutritionGoal: number;
+        /**
+         * @description
+         * In mins.
+         */
         trainingTimeGoal?: number;
+        /**
+         * @description
+         * kg or lbs depends on user settings.
+         */
         weightGoal?: number;
     };
     stripeSubscription01: {
