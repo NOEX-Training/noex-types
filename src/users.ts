@@ -93,9 +93,22 @@ export interface User {
         activityGoal?: number;
         /**
          * @description
+         * Calculated calories
+         * TDEE = BMR * PAL
+         * NEAT = TDEE + nutritionGoal
+         * Calorie = NEAT + trainingTimeGoal[horus] * 250 / 7
+         */
+        calculatedCalories: number;
+        /**
+         * @description
          * In kCal.
          */
         caloriesGoal?: number;
+        /**
+         * @description
+         * Carbs of macros.
+         */
+        carbohydrates: number;
         /**
          * @description
          * activity multiplier for calorie calulation
@@ -103,9 +116,19 @@ export interface User {
         dailyActivityPAL: number;
         /**
          * @description
+         * Fat of marcos.
+         */
+        fat: number;
+        /**
+         * @description
          * daily calorie deficit or sufficit for calorie calculation
          */
         nutritionGoal: number;
+        /**
+         * @description
+         * Protein of marcos.
+         */
+        protein: number;
         /**
          * @description
          * In mins.
