@@ -97,7 +97,7 @@ export interface User {
          * NEAT = TDEE + nutritionGoal
          * Calorie = NEAT + trainingTimeGoal[horus] * 250 / 7
          */
-        calculatedCalories: number;
+        calculatedCalories?: number;
         /**
          * @description
          * In kCal.
@@ -107,27 +107,32 @@ export interface User {
          * @description
          * Carbs of macros.
          */
-        carbohydrates: number;
+        carbohydrates?: number;
         /**
          * @description
          * activity multiplier for calorie calulation
          */
-        dailyActivityPAL: number;
+        dailyActivityPAL?: number;
+        /**
+         * @description
+         * dietary preference from a list: ['Balanced', 'Low-carb', 'High-carb', 'High-protein', 'Ketogenic', 'Custom']
+         */
+        diateryPreference?: number;
         /**
          * @description
          * Fat of marcos.
          */
-        fat: number;
+        fat?: number;
         /**
          * @description
          * daily calorie deficit or sufficit for calorie calculation
          */
-        nutritionGoal: number;
+        nutritionGoal?: number;
         /**
          * @description
          * Protein of marcos.
          */
-        protein: number;
+        protein?: number;
         /**
          * @description
          * In mins.
