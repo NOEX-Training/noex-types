@@ -1,6 +1,6 @@
 {
   "name": "noex-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.ts",
   "types": "index.d.ts",
   "repository": "https://github.com/dancixx/-types-noex",
@@ -11,11 +11,11 @@
     "prettier": "prettier --single-quote --trailing-comma all --print-width 200 --tab-width 4 --write src/**/*.ts"
   },
   "devDependencies": {
-    "@firebase/firestore-types": "^2.5.0",
-    "@types/react-native": "^0.64.14"
+    "@firebase/firestore-types": "^2.5.0"
   },
   "dependencies": {
     "@react-native-firebase/remote-config": "^12.7.5",
+    "@types/react-native": "^0.65.1",
     "prettier": "^2.4.0"
   }
 }
