@@ -116,6 +116,11 @@ export interface User {
         dailyActivityPAL: number;
         /**
          * @description
+         * dietary preference from a list: ['Balanced', 'Low-carb', 'High-carb', 'High-protein', 'Ketogenic', 'Custom']
+         */
+        diateryPreference: number
+        /**
+         * @description
          * Fat of marcos.
          */
         fat: number;
