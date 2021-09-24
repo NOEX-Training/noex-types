@@ -48,9 +48,11 @@ export interface UserProgram extends Program {
         };
         sectionUid: string;
     }>;
+    endingCondition?: DocumentReference;
     isLoaded: boolean;
     originalProgramUid: string;
     reference: DocumentReference;
+    startingCondition?: DocumentReference;
 }
 export interface ProgramWithSections extends Program {
     programSections?: Array<ProgramSection>;
