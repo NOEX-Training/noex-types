@@ -50,10 +50,23 @@ export interface UserProgram extends Program {
         };
         sectionUid: string;
     }>;
+    /**
+     * @description
+     * Only if user completed the whole program.
+     */
     endingCondition?: DocumentReference;
+    /**
+     * @description
+     * Only if user completed the whole program.
+     */
+    isCompleted?: boolean;
     isLoaded: boolean;
     originalProgramUid: string;
     reference: DocumentReference;
+    /**
+     * @description
+     * Only if user added the starting condition log.
+     */
     startingCondition?: DocumentReference;
 }
 
