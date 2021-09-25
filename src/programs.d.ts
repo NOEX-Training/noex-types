@@ -34,6 +34,14 @@ export interface Program {
     uid: string;
 }
 export interface UserProgram extends Program {
+    /**
+     * @description
+     * Only if program was completed.
+     */
+    completedDate?: {
+        nanoseconds: number;
+        seconds: number;
+    };
     doneWorkouts: Array<{
         creationDate: {
             nanoseconds: number;
