@@ -70,6 +70,11 @@ export interface User {
     isDev: boolean;
     isMetric: boolean;
     /**
+     * @description
+     * Only if download the app first without registering on the userweb.
+     */
+    isNewUser?: boolean;
+    /**
      * @deprecated
      * Only for trainers.
      */
