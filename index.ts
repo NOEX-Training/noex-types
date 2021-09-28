@@ -4,6 +4,7 @@ import * as Exercises from './src/exercises';
 import * as Files from './src/files';
 import * as Filter from './src/filter';
 import * as Guides from './src/guides';
+import * as Ingredients from './src/ingredients'
 import * as Measurements from './src/measurements';
 import * as Payments from './src/payments';
 import * as Programs from './src/programs';
@@ -15,4 +16,22 @@ import * as Users from './src/users';
 import * as WorkoutCategories from './src/workoutCategories';
 import * as Workouts from './src/workouts';
 
-export { Citation, DiscoveryContent, Exercises, Files, Filter, Guides, Measurements, Payments, Programs, RemoteConfig, Statistics, Store, Teams, Users, WorkoutCategories, Workouts };
+export {
+    Citation,
+    DiscoveryContent,
+    Exercises,
+    Files,
+    Filter,
+    Guides,
+    Ingredients,
+    Measurements,
+    Payments,
+    Programs,
+    RemoteConfig,
+    Statistics,
+    Store,
+    Teams,
+    Users,
+    WorkoutCategories,
+    Workouts
+};
