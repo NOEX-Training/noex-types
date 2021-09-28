@@ -4,7 +4,7 @@ import * as Exercises from './src/exercises';
 import * as Files from './src/files';
 import * as Filter from './src/filter';
 import * as Guides from './src/guides';
-import * as Ingredients from './src/ingredients'
+import * as Recipes from './src/recipes'
 import * as Measurements from './src/measurements';
 import * as Payments from './src/payments';
 import * as Programs from './src/programs';
@@ -23,10 +23,10 @@ export {
     Files,
     Filter,
     Guides,
-    Ingredients,
     Measurements,
     Payments,
     Programs,
+    Recipes,
     RemoteConfig,
     Statistics,
     Store,
