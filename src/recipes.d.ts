@@ -4,26 +4,26 @@ export interface Ingredient {
     key: string;
     value: {
         carbohydrate: number;
-        fiber_total_dietary: number;
-        ingredient_code: string;
-        ingredient_name: string;
+        fiber: number;
+        nameEN: string;
+        nameHU: string;
         protein: number;
-        total_amount?: number;
-        total_fat: number;
+        totalAmount?: number;
+        fat: number;
         uid: string;
     };
 }
 export interface Recipe {
-    categories: Array<'Breakfast' | 'Dinner' | 'Lunch'>;
+    categories: Array<'breakfast' | 'protein_sources' | 'sides_ch_sources' | 'snacks'>;
     creationDate: {
         nanoseconds: number;
         seconds: number;
     };
     description: string;
+    greenIngredients?: Ingredient[] | [];
     mainIngredients?: Ingredient[] | [];
     recipeHeaderUrls: Asset;
-    saladIngredients?: Ingredient[] | [];
-    sideIngredients?: Ingredient[] | [];
+    secondaryIngredients?: Ingredient[] | [];
     title: string;
     trainer: {
         name: string;
