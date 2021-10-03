@@ -19,7 +19,8 @@ export interface Recipe {
         nanoseconds: number;
         seconds: number;
     };
-    description: string;
+    descriptionEN: string;
+    descriptionHU: string;
     greenIngredients?: Ingredient[] | [];
     mainIngredients?: Ingredient[] | [];
     recipeHeaderUrls: Asset;
