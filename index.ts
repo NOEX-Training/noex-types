@@ -11,6 +11,7 @@ import * as Programs from './src/programs';
 import * as RemoteConfig from './src/remoteConfig';
 import * as Statistics from './src/statistics';
 import * as Store from './src/store';
+import * as Tags from './src/tags';
 import * as Teams from './src/teams';
 import * as Users from './src/users';
 import * as WorkoutCategories from './src/workoutCategories';
@@ -30,6 +31,7 @@ export {
     RemoteConfig,
     Statistics,
     Store,
+    Tags,
     Teams,
     Users,
     WorkoutCategories,
