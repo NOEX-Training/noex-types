@@ -14,7 +14,7 @@ export interface Ingredient {
     };
 }
 export interface Recipe {
-    categories: Array<'breakfast' | 'protein_sources' | 'sides_ch_sources' | 'snacks'>;
+    categories: Array<'breakfast' | 'protein_source' | 'sides_ch_sources' | 'snacks'>;
     creationDate: {
         nanoseconds: number;
         seconds: number;
