@@ -20,13 +20,18 @@ export interface Recipe {
         seconds: number;
     };
     descriptionEN: string;
-    descriptionHU: string;
+    /**
+     * @description
+     * Not only yet.
+     */
+    descriptionHU?: string;
     greenIngredients?: Ingredient[] | [];
     mainIngredients?: Ingredient[] | [];
     recipeHeaderUrls: Asset;
     secondaryIngredients?: Ingredient[] | [];
+    tags?: string[];
     title: string;
-    trainer: {
+    trainer?: {
         name: string;
         teamReference: DocumentReference;
         teamUid: string;
