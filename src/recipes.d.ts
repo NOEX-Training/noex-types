@@ -25,6 +25,7 @@ export interface Recipe {
      * Not only yet.
      */
     descriptionHU?: string;
+    dietaryInfo: string[];
     greenIngredients?: Ingredient[] | [];
     mainIngredients?: Ingredient[] | [];
     recipeHeaderUrls: Asset;
