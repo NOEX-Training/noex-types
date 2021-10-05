@@ -28,6 +28,7 @@ export interface Recipe {
     descriptionHU?: string;
     dietaryInfo: string[]
     greenIngredients?: Ingredient[] | []
+    likes: number;
     mainIngredients?: Ingredient[] | []
     recipeHeaderUrls: Asset
     secondaryIngredients?: Ingredient[] | []
