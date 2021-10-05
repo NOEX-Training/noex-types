@@ -4,12 +4,26 @@ export interface Ingredient {
     key: string;
     value: {
         carbohydrate: number;
+        fat: number;
         fiber: number;
+        /**
+         * @description
+         * Only in shoppingCart.
+         */
+        isChecked?: boolean;
         nameEN: string;
         nameHU: string;
+        /**
+         * Only in shoppingCart.
+         */
+        portion?: number;
         protein: number;
+        /**
+         * @description
+         * Only in shoppingCart.
+         */
+        recipeUid?: string;
         totalAmount?: number;
-        fat: number;
         uid: string;
     }
 }
@@ -33,7 +47,8 @@ export interface Recipe {
     recipeHeaderUrls: Asset
     secondaryIngredients?: Ingredient[] | []
     tags?: string[]
-    title: string
+    titleEN: string;
+    titleHU?: string;
     trainer?: {
         name: string
         teamReference: DocumentReference
