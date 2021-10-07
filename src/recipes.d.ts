@@ -37,18 +37,19 @@ export interface Recipe {
     descriptionEN: string;
     /**
      * @description
-     * Not only yet.
+     * Not active yet.
      */
     descriptionHU?: string;
     dietaryInfo: string[];
     greenIngredients?: Ingredient[] | [];
     likes: string[];
     mainIngredients?: Ingredient[] | [];
+    preparationTime: string;
     recipeHeaderUrls: Asset;
     secondaryIngredients?: Ingredient[] | [];
     tags?: string[];
     titleEN: string;
-    titleHU?: string;
+    titleHU: string;
     trainer?: {
         name: string;
         teamReference: DocumentReference;
