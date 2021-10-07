@@ -6,6 +6,7 @@ export interface Ingredient {
         carbohydrate: number;
         fat: number;
         fiber: number;
+        image?: Asset;
         /**
          * @description
          * Only in shoppingCart.
