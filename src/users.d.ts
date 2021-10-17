@@ -67,6 +67,11 @@ export interface User {
         tierLevel: number;
     };
     isDev: boolean;
+    /**
+     * @description
+     * Only if the user in the challenge.
+     */
+    isInChallenge?: boolean;
     isMetric: boolean;
     /**
      * @description

@@ -1,6 +1,18 @@
 import { Asset, TeamFile } from './files';
 import { Workout } from './workouts';
 export interface Team {
+    /**
+     * @description
+     * Only if challenge is active.
+     */
+    actualChallenge: {
+        code: string;
+        isChallengeActive: boolean;
+        startDate: {
+            nanoseconds: number;
+            seconds: number;
+        };
+    };
     creationDate: {
         nanoseconds: number;
         seconds: number;
