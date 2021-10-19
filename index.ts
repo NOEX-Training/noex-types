@@ -1,3 +1,4 @@
+import * as Challenge from './src/challenge'
 import * as Citation from './src/citations';
 import * as DiscoveryContent from './src/discoveryContent';
 import * as Exercises from './src/exercises';
@@ -18,6 +19,7 @@ import * as WorkoutCategories from './src/workoutCategories';
 import * as Workouts from './src/workouts';
 
 export {
+    Challenge,
     Citation,
     DiscoveryContent,
     Exercises,

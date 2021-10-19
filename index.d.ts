@@ -1,3 +1,4 @@
+import * as Challenge from './src/challenge';
 import * as Citation from './src/citations';
 import * as DiscoveryContent from './src/discoveryContent';
 import * as Exercises from './src/exercises';
@@ -16,4 +17,4 @@ import * as Teams from './src/teams';
 import * as Users from './src/users';
 import * as WorkoutCategories from './src/workoutCategories';
 import * as Workouts from './src/workouts';
-export { Citation, DiscoveryContent, Exercises, Files, Filter, Guides, Measurements, Payments, Programs, Recipes, RemoteConfig, Statistics, Store, Tags, Teams, Users, WorkoutCategories, Workouts };
+export { Challenge, Citation, DiscoveryContent, Exercises, Files, Filter, Guides, Measurements, Payments, Programs, Recipes, RemoteConfig, Statistics, Store, Tags, Teams, Users, WorkoutCategories, Workouts };

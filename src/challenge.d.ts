@@ -1,4 +1,5 @@
 import { DocumentReference } from '@firebase/firestore-types';
+import { WeightLogData } from './measurements';
 export interface UserChallenge {
     creationDate: {
         nanoseconds: number;
@@ -13,7 +14,36 @@ export interface UserChallenge {
         nanoseconds: number;
         seconds: number;
     };
+    /**
+     * @description
+     * Only if user checked in to the challenge.
+     */
+    goalDetails?: {
+        cardio: number | string;
+        goal: string;
+        note?: string;
+        workoutPlace?: string;
+        weeklyWorkoutsCount?: number;
+    };
+    /**
+     * @description
+     * Only if user checked in to the challenge.
+     */
+    initialState?: {
+        age: number;
+        bodyfat: number;
+        checkInLog?: WeightLogData;
+        dailyActivityPAL: number | string;
+        dailySleepTime?: number;
+        dailyStepCount?: number;
+        height: number;
+        note?: string;
+        weeklyCardioTime?: number;
+        weeklyWorkoutsCount?: number;
+        weight: number;
+    };
     name: string;
+    processed: false;
     startDate: {
         nanoseconds: number;
         seconds: number;
