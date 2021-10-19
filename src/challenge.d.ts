@@ -19,7 +19,7 @@ export interface UserChallenge {
      * Only if user checked in to the challenge.
      */
     goalDetails?: {
-        cardio: number | string;
+        cardio?: number | string;
         goal: string;
         note?: string;
         workoutPlace?: string;
@@ -42,8 +42,10 @@ export interface UserChallenge {
         weeklyWorkoutsCount?: number;
         weight: number;
     };
+    isChallengeActive: boolean;
     name: string;
-    processed: false;
+    processed: boolean;
+    reference: DocumentReference;
     startDate: {
         nanoseconds: number;
         seconds: number;

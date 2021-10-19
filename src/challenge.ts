@@ -46,6 +46,7 @@ export interface UserChallenge {
     isChallengeActive: boolean;
     name: string;
     processed: boolean,
+    reference: DocumentReference;
     startDate: {
         nanoseconds: number;
         seconds: number;

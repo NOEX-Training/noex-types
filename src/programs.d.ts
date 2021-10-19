@@ -66,6 +66,11 @@ export interface UserProgram extends Program {
      * Only if user completed the whole program.
      */
     isCompleted?: boolean;
+    /**
+     * @description
+     * Only if loaded during a challenge.
+     */
+    isChallengeProgram?: boolean;
     isLoaded: boolean;
     originalProgramUid: string;
     reference: DocumentReference;
@@ -74,6 +79,16 @@ export interface UserProgram extends Program {
      * Only if user added the starting condition log.
      */
     startingCondition?: DocumentReference;
+    /**
+     * @description
+     * Only if loaded during a challenge.
+     */
+    teamChallengeReference: DocumentReference;
+    /**
+     * @description
+     * Only if loaded during a challenge.
+     */
+    userChallengeReference?: DocumentReference;
 }
 export interface ProgramWithSections extends Program {
     programSections?: Array<ProgramSection>;
