@@ -20,7 +20,7 @@ export interface UserChallenge {
      * Only if user checked in to the challenge.
      */
     goalDetails?: {
-        cardio: number | string;
+        cardio?: number | string;
         goal: string;
         note?: string;
         workoutPlace?: string;
