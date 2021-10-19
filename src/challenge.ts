@@ -42,9 +42,10 @@ export interface UserChallenge {
         weeklyCardioTime?: number;
         weeklyWorkoutsCount?: number;
         weight: number;
-    }
+    };
+    isChallengeActive: boolean;
     name: string;
-    processed: false,
+    processed: boolean,
     startDate: {
         nanoseconds: number;
         seconds: number;
