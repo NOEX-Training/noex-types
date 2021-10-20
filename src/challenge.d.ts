@@ -1,4 +1,5 @@
 import { DocumentReference } from '@firebase/firestore-types';
+import { Asset } from './files';
 import { WeightLogData } from './measurements';
 export interface UserChallenge {
     creationDate: {
@@ -55,6 +56,7 @@ export interface UserChallenge {
     userUid: string;
 }
 export interface TeamChallenge {
+    challengeImageUrls: Asset;
     challengers: {
         startDate: {
             nanoseconds: number;

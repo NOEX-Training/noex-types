@@ -7,6 +7,7 @@ export interface Team {
      * Only if challenge is active.
      */
     actualChallenge: {
+        challengeImageUrls: Asset;
         challengeUid: string;
         code: string
         isChallengeActive: boolean,
