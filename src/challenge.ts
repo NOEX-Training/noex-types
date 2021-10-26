@@ -57,7 +57,7 @@ export interface UserChallenge {
         name: string;
         userProfilePicture: string;
         userUid: string;
-    }
+    }[];
     name: string;
     processed: boolean,
     reference: DocumentReference;
