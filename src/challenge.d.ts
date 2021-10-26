@@ -44,19 +44,7 @@ export interface UserChallenge {
         weight: number;
     };
     isChallengeActive: boolean;
-    messages?: {
-        assets: Asset[];
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        isTrainer: boolean;
-        isSeen: boolean;
-        message: string;
-        name: string;
-        userProfilePicture: string;
-        userUid: string;
-    }[];
+    messages?: Message[];
     name: string;
     processed: boolean;
     reference: DocumentReference;
@@ -87,4 +75,17 @@ export interface TeamChallenge {
     };
     title: string;
     uid: string;
+}
+export interface Message {
+    assets: Asset[];
+    creationDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    isTrainer: boolean;
+    isSeen: boolean;
+    message: string;
+    name: string;
+    userProfilePicture: string;
+    userUid: string;
 }
