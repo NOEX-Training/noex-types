@@ -46,7 +46,7 @@ export interface UserChallenge {
     };
     isChallengeActive: boolean;
     messages?: {
-        asstes: Asset[];
+        assets: Asset[];
         creationDate: {
             nanoseconds: number;
             seconds: number;

@@ -45,7 +45,7 @@ export interface UserChallenge {
     };
     isChallengeActive: boolean;
     messages?: {
-        asstes: Asset[];
+        assets: Asset[];
         creationDate: {
             nanoseconds: number;
             seconds: number;
@@ -56,7 +56,7 @@ export interface UserChallenge {
         name: string;
         userProfilePicture: string;
         userUid: string;
-    };
+    }[];
     name: string;
     processed: boolean;
     reference: DocumentReference;
