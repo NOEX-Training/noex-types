@@ -84,7 +84,7 @@ export interface Message {
     creationDate: {
         nanoseconds: number;
         seconds: number;
-    }
+    } | Date;
     isTrainer: boolean;
     isSeen: boolean;
     message: string;
