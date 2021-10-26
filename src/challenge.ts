@@ -80,7 +80,7 @@ export interface TeamChallenge {
 }
 
 export interface Message {
-    assets: Asset[];
+    assets?: Asset[];
     creationDate: {
         nanoseconds: number;
         seconds: number;
