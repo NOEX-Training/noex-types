@@ -22,6 +22,11 @@ export interface Program {
      * Only if admin program forked.
      */
     originalProgramReference?: DocumentReference;
+    /**
+     * @description
+     * Only if admin program forked.
+     */
+    originalProgramUid?: string;
     programCoverUrls: Asset;
     programHeaderUrls: Asset;
     programVideoUrls: Asset;
