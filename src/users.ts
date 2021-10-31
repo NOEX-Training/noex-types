@@ -163,13 +163,14 @@ export interface User {
         isActive: boolean;
         tierLevel: number;
     };
-    /**
-     * @description
-     * Only for trainers.
-     */
     teamUid?: string;
     trainCountGym: number;
     trainCountHome: number;
+    /**
+     * @description
+     * Only for users if is a member of a team.
+     */
+    trainerUid?: string;
     uid: string;
     weight: number;
 }
