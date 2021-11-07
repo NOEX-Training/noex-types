@@ -154,6 +154,14 @@ export interface User {
          */
         weightGoal?: number;
     };
+    /**
+     * @description
+     * Only if user paid for the challenge item
+     */
+    stripeChallenge?: {
+        isActive: boolean;
+        tierLevel: number;
+    };
     stripeSubscription01: {
         isActive: boolean;
         tierLevel: number;

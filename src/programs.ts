@@ -112,6 +112,7 @@ export interface ProgramWorkout extends Workout {
     }>;
     fromHistory: boolean;
     /**
+     * @deprecated
      * @description
      * Only if admin program forked.
      */
