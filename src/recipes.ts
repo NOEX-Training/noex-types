@@ -36,11 +36,7 @@ export interface Recipe {
         seconds: number
     };
     descriptionEN: string;
-    /**
-     * @description
-     * Not active yet.
-     */
-    descriptionHU?: string;
+    descriptionHU: string;
     dietaryInfo: string[]
     greenIngredients?: Ingredient[] | []
     likes: string[];
