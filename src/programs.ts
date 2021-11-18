@@ -3,15 +3,69 @@ import { Asset } from './files';
 import { Workout } from './workouts';
 
 export interface Program {
+    /**
+     * @description
+     * Only if program was completed.
+     * Only for users.
+     */
+    completedDate?: {
+        nanoseconds: number;
+        seconds: number;
+    }
     createdBy: string;
     creationDate: {
         nanoseconds: number;
         seconds: number;
     };
     description: string;
+    /**
+     * @description
+     * Only for users.
+     */
+    doneWorkouts?: Array<{
+        creationDate: {
+            nanoseconds: number;
+            seconds: number;
+        };
+        workoutUid: string;
+    }>;
+    /**
+     * @description
+     * Only for users.
+     */
+    doneSections?: Array<{
+        creationDate: {
+            nanoseconds: number;
+            seconds: number;
+        };
+        sectionUid: string;
+    }>;
+    /**
+     * @description
+     * Only for users.
+     * Only if user completed the whole program.
+     */
+    endingCondition?: DocumentReference;
     gender: 'Male' | 'Female' | 'UniSex';
+    /**
+     * @description
+     * Only for users.
+     * Only if user completed the whole program.
+     */
+    isCompleted?: boolean;
+    /**
+     * @description
+     * Only for users.
+     * Only if loaded during a challenge.
+     */
+    isChallengeProgram?: boolean;
     isCore?: boolean;
     isDev: boolean;
+    /**
+     * @description
+     * Only if for users if loaded the program.
+     */
+    isLoaded?: boolean;
     isTemplate: boolean;
     level: 'Grandma' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Pro' | 'Hulk';
     location: string;
@@ -24,76 +78,45 @@ export interface Program {
     originalProgramReference?: DocumentReference;
     /**
      * @description
-     * Only if admin program forked.
+     * Only if admin program forked or user loaded the program..
      */
     originalProgramUid?: string;
     programCoverUrls: Asset;
     programHeaderUrls: Asset;
     programVideoUrls: Asset;
+    reference?: DocumentReference;
     shortInfo: string;
-    tags: string[];
-    teamUid: string;
-    tierLevel: number;
-    title: string;
-    trainerUid: string;
-    type: string;
-    uid: string;
-}
-
-export interface UserProgram extends Program {
     /**
      * @description
-     * Only if program was completed.
-     */
-    completedDate?: {
-        nanoseconds: number;
-        seconds: number;
-    }
-    doneWorkouts: Array<{
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        workoutUid: string;
-    }>;
-    doneSections: Array<{
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        sectionUid: string;
-    }>;
-    /**
-     * @description
-     * Only if user completed the whole program.
-     */
-    endingCondition?: DocumentReference;
-    /**
-     * @description
-     * Only if user completed the whole program.
-     */
-    isCompleted?: boolean;
-    /**
-     * @description
-     * Only if loaded during a challenge.
-     */
-    isChallengeProgram?: boolean;
-    isLoaded: boolean;
-    originalProgramUid: string;
-    reference: DocumentReference;
-    /**
-     * @description
+     * Only for users.
      * Only if user added the starting condition log.
      */
     startingCondition?: DocumentReference;
+    tags: string[];
     /**
      * @description
+     * Only for users.
      * Only if loaded during a challenge.
      */
     teamChallengeReference: DocumentReference;
     /**
      * @description
-     * Only if loaded during a challenge.
+     * Only if teamProgram
+     */
+    teamUid?: string;
+    /**
+     * @description
+     * Only if program is active in any team.
+     */
+    teamUids?: string[]
+    tierLevel: number;
+    title: string;
+    trainerUid: string;
+    type: string;
+    uid: string;
+    /**
+     * @description
+     * Only for users if they are in challenge mode.
      */
     userChallengeReference?: DocumentReference;
 }
