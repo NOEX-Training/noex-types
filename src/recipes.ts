@@ -44,7 +44,8 @@ export interface Recipe {
     preparationTime: string;
     recipeHeaderUrls: Asset
     secondaryIngredients?: Ingredient[] | []
-    tags?: string[]
+    tags?: string[];
+    tierLevel: number;
     titleEN: string;
     titleHU: string;
     trainer?: {
