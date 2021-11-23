@@ -9,8 +9,16 @@ export interface Post {
     post?: string;
     sharedCameraPhoto?: Asset | null;
     sharedMedia?: Asset[] | null;
-    teamUid: string;
-    trainerUid: string;
+    /**
+     * @description
+     * If trainer post.
+     */
+    teamUid?: string;
+    /**
+     * @description
+     * If trainer post.
+     */
+    trainerUid?: string;
     uid: string;
     userName: string;
     userProfilePicture: string;
