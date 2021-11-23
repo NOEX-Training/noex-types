@@ -69,6 +69,7 @@ export interface TeamChallenge {
     }[];
     code: string;
     isChallengeActive: boolean;
+    isRegistrationPeriodActive?: boolean;
     startDate: {
         nanoseconds: number;
         seconds: number;

@@ -9,8 +9,9 @@ export interface Team {
     actualChallenge: {
         challengeImageUrls: Asset;
         challengeUid: string;
-        code: string
-        isChallengeActive: boolean,
+        code: string;
+        isChallengeActive: boolean;
+        isRegistrationPeriodActive?: boolean;
         startDate: {
             nanoseconds: number;
             seconds: number;
