@@ -10,6 +10,7 @@ import * as Measurements from './src/measurements';
 import * as Notifications from './src/notifications'
 import * as Payments from './src/payments';
 import * as Programs from './src/programs';
+import * as Questions from './src/questions'
 import * as RemoteConfig from './src/remoteConfig';
 import * as Statistics from './src/statistics';
 import * as Store from './src/store';
@@ -32,6 +33,7 @@ export {
     Payments,
     Programs,
     Recipes,
+    Questions,
     RemoteConfig,
     Statistics,
     Store,

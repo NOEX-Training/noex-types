@@ -106,7 +106,17 @@ export interface IAPPurchase {
          * iOS only: issue
          * Android only: remorse, not_received, defective, accidental_purchase, fraud, friendly_fraud, chargeback
          */
-        refundReaseon: 'subscription_replaced' | 'other' | 'issue' | 'remorse' | 'not_received' | 'defective' | 'accidental_purchase' | 'fraud' | 'friendly_fraud' | 'chargeback';
+        refundReaseon:
+            | 'subscription_replaced'
+            | 'other'
+            | 'issue'
+            | 'remorse'
+            | 'not_received'
+            | 'defective'
+            | 'accidental_purchase'
+            | 'fraud'
+            | 'friendly_fraud'
+            | 'chargeback';
         /**
          * @description
          * Only if isRefunded is true.
@@ -129,7 +139,11 @@ export interface IAPPurchase {
          * Only if isSubscription is true
          * Only when the transaction has been created because of a subscription replace
          */
-        subscriptionProrationMode: 'immediate_with_time_proration' | 'immediate_and_charge_prorated_price' | 'immediate_without_proration' | 'deferred';
+        subscriptionProrationMode:
+            | 'immediate_with_time_proration'
+            | 'immediate_and_charge_prorated_price'
+            | 'immediate_without_proration'
+            | 'deferred';
         /**
          * @description
          * Only if isSubscription is true

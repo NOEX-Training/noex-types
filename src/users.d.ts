@@ -215,3 +215,11 @@ export interface UserTeam {
     trainerUid: string;
     uid: string;
 }
+export interface UserAppOpen {
+    connectionDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    logs: string[];
+    uid: string;
+}

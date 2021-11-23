@@ -128,7 +128,7 @@ export interface User {
          * @description
          * dietary preference from a list: ['Balanced', 'Low-carb', 'High-carb', 'High-protein', 'Ketogenic', 'Custom']
          */
-        diateryPreference?: number
+        diateryPreference?: number;
         /**
          * @description
          * Fat of marcos.
@@ -162,7 +162,7 @@ export interface User {
     stripeChallenge?: {
         isActive: boolean;
         tierLevel: number;
-    }
+    };
     stripeSubscription01: {
         isActive: boolean;
         tierLevel: number;
@@ -219,5 +219,14 @@ export interface UserTeam {
     teamUid: string;
     trainer: string;
     trainerUid: string;
+    uid: string;
+}
+
+export interface UserAppOpen {
+    connectionDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    logs: string[];
     uid: string;
 }

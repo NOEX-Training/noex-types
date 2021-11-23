@@ -2,7 +2,7 @@ export interface TagType {
     creationDate: {
         nanoseconds: number;
         seconds: number;
-    }
+    };
     key: string;
     name: string;
     tags?: {

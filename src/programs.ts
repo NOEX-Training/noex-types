@@ -11,7 +11,7 @@ export interface Program {
     completedDate?: {
         nanoseconds: number;
         seconds: number;
-    }
+    };
     createdBy: string;
     creationDate: {
         nanoseconds: number;
@@ -108,7 +108,7 @@ export interface Program {
      * @description
      * Only if program is active in any team.
      */
-    teamUids?: string[]
+    teamUids?: string[];
     tierLevel: number;
     title: string;
     trainerUid: string;

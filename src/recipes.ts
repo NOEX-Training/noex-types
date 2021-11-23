@@ -26,34 +26,34 @@ export interface Ingredient {
         recipeUid?: string;
         totalAmount?: number;
         uid: string;
-    }
+    };
 }
 
 export interface Recipe {
-    categories: Array<'breakfast' | 'protein_source' | 'sides_ch_source' | 'snack'>
+    categories: Array<'breakfast' | 'protein_source' | 'sides_ch_source' | 'snack'>;
     creationDate: {
         nanoseconds: number;
-        seconds: number
+        seconds: number;
     };
     descriptionEN: string;
     descriptionHU: string;
-    dietaryInfo: string[]
-    greenIngredients?: Ingredient[] | []
+    dietaryInfo: string[];
+    greenIngredients?: Ingredient[] | [];
     likes: string[];
-    mainIngredients?: Ingredient[] | []
+    mainIngredients?: Ingredient[] | [];
     preparationTime: string;
-    recipeHeaderUrls: Asset
-    secondaryIngredients?: Ingredient[] | []
+    recipeHeaderUrls: Asset;
+    secondaryIngredients?: Ingredient[] | [];
     tags?: string[];
     tierLevel: number;
     titleEN: string;
     titleHU: string;
     trainer?: {
-        name: string
-        teamReference: DocumentReference
-        teamUid: string
-        trainerReference: DocumentReference
-        trainerUid: string
-    },
-    uid: string
+        name: string;
+        teamReference: DocumentReference;
+        teamUid: string;
+        trainerReference: DocumentReference;
+        trainerUid: string;
+    };
+    uid: string;
 }

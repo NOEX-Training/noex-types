@@ -26,7 +26,7 @@ export interface UserChallenge {
         note?: string;
         workoutPlace?: string;
         weeklyWorkoutsCount?: number;
-    }
+    };
     /**
      * @description
      * Only if user checked in to the challenge.
@@ -47,7 +47,7 @@ export interface UserChallenge {
     isChallengeActive: boolean;
     messages?: Message[];
     name: string;
-    processed: boolean,
+    processed: boolean;
     reference: DocumentReference;
     startDate: {
         nanoseconds: number;
@@ -82,10 +82,12 @@ export interface TeamChallenge {
 
 export interface Message {
     assets?: Asset[];
-    creationDate: {
-        nanoseconds: number;
-        seconds: number;
-    } | Date;
+    creationDate:
+        | {
+              nanoseconds: number;
+              seconds: number;
+          }
+        | Date;
     isTrainer: boolean;
     isSeen: boolean;
     message: string;
