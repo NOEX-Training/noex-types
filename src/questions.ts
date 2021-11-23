@@ -8,7 +8,7 @@ export interface Post {
     likes?: string[];
     post?: string;
     sharedCameraPhoto?: Asset | null;
-    sharedMedia?: Asset[] | null;
+    sharedMedia?: Asset | null;
     teamUid: string;
     trainerUid: string;
     uid: string;
@@ -27,14 +27,14 @@ export interface Comment {
     likes?: string[];
     postUid: string;
     reply:
-        | string
-        | {
-              reply: string;
-              toUserName: string;
-              toUserUid: string;
-          };
+    | string
+    | {
+        reply: string;
+        toUserName: string;
+        toUserUid: string;
+    };
     sharedCameraPhoto?: Asset | null;
-    sharedMedia?: Asset[] | null;
+    sharedMedia?: Asset | null;
     teamUid: string;
     trainerUid: string;
     uid: string;
@@ -52,12 +52,12 @@ export interface Reply {
     likes?: string[];
     postUid: string;
     reply:
-        | string
-        | {
-              reply: string;
-              toUserName: string;
-              toUserUid: string;
-          };
+    | string
+    | {
+        reply: string;
+        toUserName: string;
+        toUserUid: string;
+    };
     sharedCameraPhoto?: Asset | null;
     sharedMedia?: Asset[] | null;
     teamUid: string;
