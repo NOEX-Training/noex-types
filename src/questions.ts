@@ -8,7 +8,7 @@ export interface Post {
     likes?: string[];
     post?: string;
     sharedCameraPhoto?: Asset | null;
-    sharedMedia?: Asset | null;
+    sharedMedia?: Asset[] | null;
     teamUid: string;
     trainerUid: string;
     uid: string;
@@ -59,7 +59,7 @@ export interface Reply {
         toUserUid: string;
     };
     sharedCameraPhoto?: Asset | null;
-    sharedMedia?: Asset[] | null;
+    sharedMedia?: Asset | null;
     teamUid: string;
     trainerUid: string;
     uid: string;
