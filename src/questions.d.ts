@@ -4,6 +4,16 @@ export interface Post {
         nanoseconds: number;
         seconds: number;
     };
+    /**
+     * @description
+     * Only for NOEX posts.
+     */
+    isCore?: boolean;
+    /**
+     * @description
+     * Only for NOEX posts.
+     */
+    isDev?: boolean;
     likes?: string[];
     post?: string;
     sharedCameraPhoto?: Asset | null;
