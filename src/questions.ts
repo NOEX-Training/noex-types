@@ -26,6 +26,11 @@ export interface Post {
     teamUid?: string;
     /**
      * @description
+     * Only for NOEX posts.
+     */
+    teamUids?: string[]
+    /**
+     * @description
      * If trainer post.
      */
     trainerUid?: string;
