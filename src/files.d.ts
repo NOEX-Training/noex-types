@@ -20,6 +20,12 @@ export interface Asset {
         updated: string;
     };
     key: string;
+    mirror?: {
+        Bucket: string;
+        Key: string;
+        Location: string;
+        key: string;
+    };
     uid: string;
     videoAssetKey?: string;
 }
