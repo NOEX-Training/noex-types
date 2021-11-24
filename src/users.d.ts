@@ -83,6 +83,11 @@ export interface User {
      * Only for trainers.
      */
     isSubTrainer?: boolean;
+    /**
+     * @description
+     * Only if user is a support user.
+     */
+    isSupport?: boolean;
     isTrainer: boolean;
     isVip: boolean;
     isWebRegister: boolean;
