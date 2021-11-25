@@ -14,7 +14,11 @@ export interface Post {
      * Only for NOEX posts.
      */
     isDev?: boolean;
-    likes?: string[];
+    likes?: {
+        userProfilePicture: string;
+        userName: string;
+        userUid: string;
+    };
     post?: string;
     sharedCameraPhoto?: Asset | null;
     sharedMedia?: Asset[] | null;
