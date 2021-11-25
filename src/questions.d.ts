@@ -18,7 +18,7 @@ export interface Post {
         userProfilePicture: string;
         userName: string;
         userUid: string;
-    };
+    }[];
     post?: string;
     sharedCameraPhoto?: Asset | null;
     sharedMedia?: Asset[] | null;
