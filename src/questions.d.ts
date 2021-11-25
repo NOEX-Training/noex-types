@@ -15,7 +15,7 @@ export interface Post {
      */
     isDev?: boolean;
     likes?: {
-        userProfilePicture: string;
+        userProfilePicture: string | null;
         userName: string;
         userUid: string;
     }[];
