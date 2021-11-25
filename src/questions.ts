@@ -1,4 +1,4 @@
-import { Asset } from './files';
+import { Asset, TeamFile } from './files';
 
 export interface Post {
     creationDate: {
@@ -22,7 +22,7 @@ export interface Post {
     }[];
     post?: string;
     sharedCameraPhoto?: Asset | null;
-    sharedMedia?: Asset[] | null;
+    sharedMedia?: Asset[] | TeamFile[] | null;
     /**
      * @description
      * If trainer post.
@@ -60,8 +60,8 @@ export interface Comment {
         toUserName: string;
         toUserUid: string;
     };
-    sharedCameraPhoto?: Asset | null;
-    sharedMedia?: Asset | null;
+    sharedCameraPhoto?: Asset | TeamFile | null;
+    sharedMedia?: Asset | TeamFile | null;
     teamUid: string;
     trainerUid: string;
     uid: string;
