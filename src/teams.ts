@@ -23,6 +23,7 @@ export interface Team {
     };
     instagramTitle: string;
     isDev: boolean;
+    language: 'en' | 'hu';
     memberUids: string[];
     name: string;
     subTrainerUids: string[];
@@ -68,7 +69,7 @@ export interface Team {
     uid: string;
 }
 
-export interface TeamWorkout extends Workout {}
+export interface TeamWorkout extends Workout { }
 
 export interface TeamWorkoutSection {
     createdBy: string;
@@ -133,12 +134,12 @@ export interface TrainerReply {
     };
     likes?: string[];
     reply:
-        | {
-              reply: string;
-              toUserName: string;
-              toUserUid: string;
-          }
-        | string;
+    | {
+        reply: string;
+        toUserName: string;
+        toUserUid: string;
+    }
+    | string;
     sharedCameraPhoto: TeamFile | null;
     sharedMedia: TeamFile | null;
     teamUid: string;
@@ -149,15 +150,15 @@ export interface TrainerReply {
     userUid: string;
 }
 
-export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> {}
-export interface QuestionComment extends TrainerComment {}
-export interface QuestionReply extends TrainerReply {}
+export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> { }
+export interface QuestionComment extends TrainerComment { }
+export interface QuestionReply extends TrainerReply { }
 /**@deprecated */
-export interface UserFeedPost extends TrainerPost {}
+export interface UserFeedPost extends TrainerPost { }
 /**@deprecated */
-export interface UserFeedComment extends TrainerComment {}
+export interface UserFeedComment extends TrainerComment { }
 /**@deprecated */
-export interface UserFeedReply extends TrainerReply {}
+export interface UserFeedReply extends TrainerReply { }
 
 export interface GiphyResponse {
     data: Array<Gifs>;

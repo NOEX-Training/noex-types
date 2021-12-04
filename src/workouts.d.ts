@@ -43,11 +43,26 @@ export interface Workout {
     inspiredTag: string;
     isCore?: boolean;
     isDev?: boolean;
+    /**
+     * @description
+     * Only if trainer assigned the workout.
+     */
+    originalWorkoutUid?: string;
     sectionOrder: number;
     sectionUid: string;
     startDate?: number;
     tags: string[];
+    /**
+     * @description
+     * Only if trainer assigned the workout.
+     */
+    teamUid?: string;
     title: string;
+    /**
+     * @description
+     * Only if trainer assigned the workout.
+     */
+    trainerUid?: string;
     uid: string;
     userUid?: string;
     workoutHeaderUrls: Asset;
@@ -55,6 +70,17 @@ export interface Workout {
     workoutThumbUrls: Asset;
     workoutType?: string;
     youtubeLink: string;
+}
+export interface WorkoutSection {
+    createdBy: string;
+    creationDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    order: number;
+    sectionTitle: string;
+    uid: string;
+    userUid: string;
 }
 export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     exercises: Array<WorkoutExercise>;

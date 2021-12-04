@@ -22,6 +22,7 @@ export interface Team {
     };
     instagramTitle: string;
     isDev: boolean;
+    language: 'en' | 'hu';
     memberUids: string[];
     name: string;
     subTrainerUids: string[];
