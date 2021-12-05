@@ -55,7 +55,8 @@ export interface Team {
             dayTimeTextColor: '#000000' | '#FFFFFF';
             profileIconStyle: 'icon' | 'image';
             statIconColor: '#000000' | '#FFFFFF';
-            tileStyle: 'small' | 'large';
+            tileStyle: 'small' | 'large' | 'image';
+            tileImage: Asset;
             backgroundColor: string;
         };
     };
