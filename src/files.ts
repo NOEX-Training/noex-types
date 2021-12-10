@@ -19,6 +19,11 @@ export interface Asset {
         type: string;
         updated: string;
     };
+    /**
+     * @description
+     * Only if the trainer uploaded own video.
+     */
+    isProcessed?: boolean;
     key: string;
     mirror?: {
         Bucket: string;
