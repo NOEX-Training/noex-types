@@ -80,6 +80,13 @@ export interface TeamFile {
         fullPath: string;
         name: string;
     };
+    key: string;
+    mirror?: {
+        Bucket: string;
+        Key: string;
+        Location: string;
+        key: string;
+    };
 }
 export interface WorkoutSummaryImage {
     creationDate: {
