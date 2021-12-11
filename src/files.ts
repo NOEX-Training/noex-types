@@ -21,6 +21,11 @@ export interface Asset {
     };
     /**
      * @description
+     * Only if the trainer uploaded own video and it was denied.
+     */
+    isDenieded?: boolean;
+    /**
+     * @description
      * Only if the trainer uploaded own video.
      */
     isProcessed?: boolean;
@@ -31,6 +36,11 @@ export interface Asset {
         Location: string;
         key: string;
     }
+    /**
+     * @description
+     * If isDenieded is true.
+     */
+    reviewComment?: string;
     uid: string;
     videoAssetKey?: string;
 }
