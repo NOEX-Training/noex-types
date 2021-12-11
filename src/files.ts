@@ -84,7 +84,15 @@ export interface TeamFile {
         fullPath: string;
         name: string;
     };
-    key: string;
+    /**
+     * @description
+     * Only works for noex posts now.
+     */
+    key?: string;
+    /**
+     * @description
+     * Only works for noex posts now.
+     */
     mirror?: {
         Bucket: string;
         Key: string;
