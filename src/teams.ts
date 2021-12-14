@@ -26,6 +26,8 @@ export interface Team {
     language: 'en' | 'hu';
     memberUids: string[];
     name: string;
+    proSubscriptionItems: string[];
+    eliteSubscriptionItems: string[];
     subTrainerUids: string[];
     teamStyle: {
         appIcon: string;
