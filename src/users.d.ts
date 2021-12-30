@@ -1,4 +1,4 @@
-import { Workout } from './workouts';
+import { Workout } from "./workouts";
 /**
  * @description
  * User object.
@@ -37,7 +37,7 @@ export interface User {
     dmgUpperBack: number;
     dmgUpperChest: number;
     email: string;
-    experience: 'Beginner' | 'Intermediate' | 'Professional';
+    experience: "Beginner" | "Intermediate" | "Professional";
     facebookProfilePictureUrl: {
         downloadURL: string;
         fileData: {
@@ -55,7 +55,7 @@ export interface User {
         };
     };
     fatLossValue: number;
-    gender: 'Male' | 'Female';
+    gender: "Male" | "Female";
     goal: Array<{
         key: string;
         text: string;
@@ -91,7 +91,7 @@ export interface User {
     isTrainer: boolean;
     isVip: boolean;
     isWebRegister: boolean;
-    language: 'hu' | 'en';
+    language: "hu" | "en";
     /**
      * @description
      * Only for trainers.
@@ -176,7 +176,18 @@ export interface User {
         tierLevel: number;
     };
     teamUid?: string;
+    /**
+     * @description
+     * trainCountHome & trainCountGym were merged.
+     */
+    trainCount: number;
+    /**
+     * @deprecated
+     */
     trainCountGym: number;
+    /**
+     * @deprecated
+     */
     trainCountHome: number;
     /**
      * @description
