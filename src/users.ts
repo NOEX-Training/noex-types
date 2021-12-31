@@ -197,6 +197,8 @@ export interface User {
     trainerUid?: string;
     uid: string;
     weight: number;
+    workoutsLast7Days?: number;
+    workoutsLast30Days?: number;
 }
 
 export interface UserWorkoutsSection {
