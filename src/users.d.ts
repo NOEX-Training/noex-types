@@ -107,6 +107,11 @@ export interface User {
         activityGoal?: number;
         /**
          * @description
+         * Bodyfat goal.
+         */
+        bodyfatGoal?: number;
+        /**
+         * @description
          * Calculated calories
          * TDEE = BMR * PAL
          * NEAT = TDEE + nutritionGoal
