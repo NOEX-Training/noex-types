@@ -1,5 +1,5 @@
-import { Asset } from './files';
-import { DocumentReference } from '@firebase/firestore-types';
+import { Asset } from "./files";
+import { DocumentReference } from "@firebase/firestore-types";
 export interface Ingredient {
     key: string;
     value: {
@@ -29,7 +29,7 @@ export interface Ingredient {
     };
 }
 export interface Recipe {
-    categories: Array<'breakfast' | 'protein_source' | 'sides_ch_source' | 'snack'>;
+    categories: Array<"breakfast" | "protein_source" | "sides_ch_source" | "snack">;
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -43,6 +43,11 @@ export interface Recipe {
     preparationTime: string;
     recipeHeaderUrls: Asset;
     secondaryIngredients?: Ingredient[] | [];
+    /**
+     * @description
+     * Only active if the recipe is pinned by admin.
+     */
+    pinned?: boolean;
     tags?: string[];
     tierLevel: number;
     titleEN: string;
