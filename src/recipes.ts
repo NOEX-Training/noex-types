@@ -43,6 +43,7 @@ export interface Recipe {
     mainIngredients?: Ingredient[] | [];
     preparationTime: string;
     recipeHeaderUrls: Asset;
+    recipeStepsUrls: Asset[];
     secondaryIngredients?: Ingredient[] | [];
     /**
      * @description
