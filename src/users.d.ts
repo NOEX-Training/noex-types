@@ -112,6 +112,11 @@ export interface User {
         bodyfatGoal?: number;
         /**
          * @description
+         * Cardio goal, default 150 mins.
+         */
+        cardioGoal?: number;
+        /**
+         * @description
          * Calculated calories
          * TDEE = BMR * PAL
          * NEAT = TDEE + nutritionGoal

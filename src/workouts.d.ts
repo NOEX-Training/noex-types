@@ -131,3 +131,17 @@ export interface WorkoutRating {
     userProfilePicture: string;
     userUid: string;
 }
+export interface Cardio {
+    creationDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    caloriesBurned: number;
+    duration: number;
+    startDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    type: string;
+    uid: string;
+}
