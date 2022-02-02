@@ -5,19 +5,23 @@
 export interface Asset {
     downloadURL: string;
     fileData: {
-        bucket: string;
-        contentDisposition: string;
-        contentEncoding: string;
-        contentType: 'video/mp4' | 'image/jpeg';
+        bucket?: string;
+        contentDisposition?: string;
+        contentEncoding?: string;
+        contentType: "video/mp4" | "image/jpeg";
+        dimensions?: {
+            height: number;
+            width: number;
+        };
         fullPath: string;
-        generation: string;
-        md5Hash: string;
-        metageneration: string;
+        generation?: string;
+        md5Hash?: string;
+        metageneration?: string;
         name: string;
         size: number;
         creationDate: string;
-        type: string;
-        updated: string;
+        type?: string;
+        updated?: string;
     };
     /**
      * @description
@@ -35,7 +39,7 @@ export interface Asset {
         Key: string;
         Location: string;
         key: string;
-    }
+    };
     /**
      * @description
      * If isDenieded is true.
@@ -72,11 +76,11 @@ export interface TeamFile {
     fileData: {
         contentType: string;
         creationDate:
-        | {
-            nanoseconds: number;
-            seconds: number;
-        }
-        | Date;
+            | {
+                  nanoseconds: number;
+                  seconds: number;
+              }
+            | Date;
         dimensions: {
             height: number;
             width: number;
@@ -98,7 +102,7 @@ export interface TeamFile {
         Key: string;
         Location: string;
         key: string;
-    }
+    };
 }
 
 export interface WorkoutSummaryImage {

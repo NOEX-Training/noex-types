@@ -1,3 +1,5 @@
+import { Asset } from "./files";
+
 export interface Weight {
     key: string;
     value: number;
@@ -43,10 +45,10 @@ export interface WeightLogData {
      * Only if sent body measurements.
      */
     metric?: MeasurementState;
-    photoBack?: PhotoData;
-    photoFront?: PhotoData;
-    photoSide?: PhotoData;
-    type: 'muscle' | 'weight';
+    photoBack?: Asset;
+    photoFront?: Asset;
+    photoSide?: Asset;
+    type: "muscle" | "weight";
     uid: string;
     userUid: string;
     /**
@@ -68,21 +70,7 @@ export interface Height {
 }
 
 export enum PhotoTypes {
-    back = 'back',
-    front = 'front',
-    side = 'side',
-}
-
-export interface PhotoData {
-    downloadURL: string;
-    fileData: {
-        contentType: string;
-        dimensions: {
-            height: number;
-            width: number;
-        };
-        fullPath: string;
-        name: string;
-        creationDate: any;
-    };
+    back = "back",
+    front = "front",
+    side = "side",
 }
