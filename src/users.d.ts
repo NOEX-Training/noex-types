@@ -188,6 +188,11 @@ export interface User {
     teamUid?: string;
     /**
      * @description
+     * Notification token.
+     */
+    token?: string;
+    /**
+     * @description
      * trainCountHome & trainCountGym were merged.
      */
     trainCount: number;
