@@ -1,6 +1,7 @@
-import { Asset } from './files';
+import { Asset } from "./files";
 
 export interface Guide {
+    category: string;
     createdBy: string;
     creationDate: {
         nanoseconds: number;
@@ -10,7 +11,7 @@ export interface Guide {
     elements: Array<GuideElement>;
     guideCoverUrl: Asset;
     isCore?: boolean;
-    language: 'hu' | 'en';
+    language: "hu" | "en";
     opened: number;
     overlayText: string;
     sectionOrder: number;
@@ -49,7 +50,7 @@ export interface GuidesSection {
 }
 
 export interface GuideElement {
-    type: 'text' | 'richText' | 'youtubeLink' | 'fileUploader' | 'textUrl';
+    type: "text" | "richText" | "youtubeLink" | "fileUploader" | "textUrl";
     title: string;
     id: string;
     index?: number;
