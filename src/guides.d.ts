@@ -1,6 +1,6 @@
 import { Asset } from "./files";
 export interface Guide {
-    category: string;
+    category: "trainer" | "nutrition" | "regeneration" | "supplements" | "training";
     /**
      * @deprecated
      */
