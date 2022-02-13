@@ -17,6 +17,11 @@ export interface Guide {
     language: "hu" | "en";
     opened: number;
     overlayText: string;
+    /**
+     * @description
+     * Only if noex guides is pinned for suggestion.
+     */
+    pinned?: boolean;
     sectionOrder: number;
     sectionUid: string;
     subTitle?: string;
