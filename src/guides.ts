@@ -2,7 +2,10 @@ import { Asset } from "./files";
 
 export interface Guide {
     category: string;
-    createdBy: string;
+    /**
+     * @deprecated
+     */
+    createdBy?: string;
     creationDate: {
         nanoseconds: number;
         seconds: number;
@@ -32,20 +35,29 @@ export interface Guide {
     };
     trainerUids?: string[];
     uid: string;
-    userUid: string;
+    /**
+     * @deprecated
+     */
+    userUid?: string;
 }
 
 export interface GuidesSection {
+    /**
+     * @deprecated
+     */
     createdBy: string;
     creationDate: {
         nanoseconds: number;
         seconds: number;
     };
     isCore?: boolean;
-    order: number;
+    order?: number;
     sectionTitle: string;
     sectionTitleEn?: string;
     uid: string;
+    /**
+     * @deprecated
+     */
     userUid: string;
 }
 
