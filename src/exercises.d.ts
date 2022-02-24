@@ -1,5 +1,5 @@
-import { Asset } from './files';
-import { WorkoutExerciseSet } from './workouts';
+import { Asset } from "./files";
+import { WorkoutExerciseSet } from "./workouts";
 /**
  * @description
  * The Exercise object.
@@ -51,7 +51,7 @@ export interface Exercise {
     movementType: string;
     posterImagesMan?: Array<Asset>;
     posterImagesWoman?: Array<Asset>;
-    setType: 'WRR' | 'RR' | 'DR';
+    setType: "WRR" | "RR" | "DR";
     shortInfo: string;
     shortInfoEn: string;
     similarExerciseType: string;
@@ -72,7 +72,7 @@ export interface Exercise {
     }>;
 }
 export interface ExerciseDescriptionElement {
-    type: 'text' | 'richText' | 'youtubeLink' | 'fileUploader' | 'textUrl';
+    type: "text" | "richText" | "youtubeLink" | "fileUploader" | "textUrl";
     title: string;
     id: string;
     index?: number;
@@ -91,6 +91,7 @@ export interface ExerciseHistory {
         nanoseconds: number;
         seconds: number;
     };
+    exerciseNote?: string;
     exerciseSets: Array<WorkoutExerciseSet>;
     exerciseUid: string;
     uid: string;
