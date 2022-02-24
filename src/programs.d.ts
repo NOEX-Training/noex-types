@@ -1,6 +1,6 @@
-import { DocumentReference } from '@firebase/firestore-types';
-import { Asset } from './files';
-import { Workout } from './workouts';
+import { DocumentReference } from "@firebase/firestore-types";
+import { Asset } from "./files";
+import { Workout } from "./workouts";
 export interface Program {
     /**
      * @description
@@ -45,7 +45,7 @@ export interface Program {
      * Only if user completed the whole program.
      */
     endingCondition?: DocumentReference;
-    gender: 'Male' | 'Female' | 'UniSex';
+    gender: "Male" | "Female" | "UniSex";
     /**
      * @description
      * Only for users.
@@ -66,7 +66,7 @@ export interface Program {
      */
     isLoaded?: boolean;
     isTemplate: boolean;
-    level: 'Grandma' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Pro' | 'Hulk';
+    level: "Grandma" | "Beginner" | "Intermediate" | "Advanced" | "Pro" | "Hulk";
     location: string;
     measurementInfo: string;
     order: number;
@@ -122,6 +122,10 @@ export interface Program {
 export interface ProgramWithSections extends Program {
     programSections?: Array<ProgramSection>;
 }
+/**
+ * @deprecated
+ * 2022.02.24.
+ */
 export interface ProgramWorkout extends Workout {
     doneWorkouts?: Array<{
         creationDate: {

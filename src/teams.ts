@@ -1,5 +1,5 @@
-import { Asset, TeamFile } from './files';
-import { Workout } from './workouts';
+import { Asset, TeamFile } from "./files";
+import { Workout } from "./workouts";
 
 export interface Team {
     /**
@@ -23,7 +23,7 @@ export interface Team {
     };
     instagramTitle: string;
     isDev: boolean;
-    language: 'en' | 'hu';
+    language: "en" | "hu";
     memberUids: string[];
     name: string;
     proSubscriptionItems: string[];
@@ -38,7 +38,7 @@ export interface Team {
             width: number;
         };
         programWorkoutsTileStyle: {
-            tileImageStyle: 'image' | 'svg';
+            tileImageStyle: "image" | "svg";
         };
         secondaryColorStyle: {
             checkBoxColor: string;
@@ -51,15 +51,15 @@ export interface Team {
             width: number;
         };
         teamWorkoutsTileStyle: {
-            tileImageStyle: 'image' | 'svg';
+            tileImageStyle: "image" | "svg";
         };
         welcomeTileStyle: {
-            bellIconColor: '#000000' | '#FFFFFF';
-            dayTimeTextColor: '#000000' | '#FFFFFF';
-            profileIconStyle: 'icon' | 'image';
-            statIconColor: '#000000' | '#FFFFFF';
-            tileStyle: 'small' | 'large' | 'image';
-            tileImage: Asset
+            bellIconColor: "#000000" | "#FFFFFF";
+            dayTimeTextColor: "#000000" | "#FFFFFF";
+            profileIconStyle: "icon" | "image";
+            statIconColor: "#000000" | "#FFFFFF";
+            tileStyle: "small" | "large" | "image";
+            tileImage: Asset;
             backgroundColor: string;
         };
     };
@@ -72,7 +72,11 @@ export interface Team {
     uid: string;
 }
 
-export interface TeamWorkout extends Workout { }
+/**
+ * @deprecated
+ * 2022.02.24.
+ */
+export interface TeamWorkout extends Workout {}
 
 export interface TeamWorkoutSection {
     createdBy: string;
@@ -137,12 +141,12 @@ export interface TrainerReply {
     };
     likes?: string[];
     reply:
-    | {
-        reply: string;
-        toUserName: string;
-        toUserUid: string;
-    }
-    | string;
+        | {
+              reply: string;
+              toUserName: string;
+              toUserUid: string;
+          }
+        | string;
     sharedCameraPhoto: TeamFile | null;
     sharedMedia: TeamFile | null;
     teamUid: string;
@@ -153,15 +157,15 @@ export interface TrainerReply {
     userUid: string;
 }
 
-export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> { }
-export interface QuestionComment extends TrainerComment { }
-export interface QuestionReply extends TrainerReply { }
+export interface QuestionPost extends Omit<TrainerPost, "sharedWorkout"> {}
+export interface QuestionComment extends TrainerComment {}
+export interface QuestionReply extends TrainerReply {}
 /**@deprecated */
-export interface UserFeedPost extends TrainerPost { }
+export interface UserFeedPost extends TrainerPost {}
 /**@deprecated */
-export interface UserFeedComment extends TrainerComment { }
+export interface UserFeedComment extends TrainerComment {}
 /**@deprecated */
-export interface UserFeedReply extends TrainerReply { }
+export interface UserFeedReply extends TrainerReply {}
 
 export interface GiphyResponse {
     data: Array<Gifs>;

@@ -1,3 +1,4 @@
+import { DocumentReference } from "@firebase/firestore-types";
 import { Exercise } from "./exercises";
 import { Asset } from "./files";
 
@@ -8,19 +9,58 @@ import { Asset } from "./files";
 export interface WorkoutExerciseSet {
     checked: boolean;
     duration?: number | string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    entityId?: string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    exerciseEntityId?: string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    exerciseId?: string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    exerciseIndex?: number;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
     isMetric?: boolean;
     reps?: number | string;
     repsSuggestion?: string;
     restTime: number | string;
     rm?: number | string;
     rpe?: number | string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    setIndex?: number;
     status: "S" | "F" | "D" | "W" | "T" | "P" | "RP";
     weight?: number | string;
 }
 
 export interface WorkoutExercise extends Exercise {
     exerciseNote?: string;
-    exerciseSets?: Array<WorkoutExerciseSet>;
+    exerciseSets?: WorkoutExerciseSet[];
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    entityId?: string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    index?: number;
     isExerciseMetric?: boolean;
     isPulse?: boolean;
     note?: string;
@@ -39,18 +79,61 @@ export interface Workout {
         seconds: number;
     };
     description?: string;
+    /**
+     * @description
+     * Only if program workout.
+     */
+    doneWorkouts?: {
+        creationDate: {
+            nanoseconds: number;
+            seconds: number;
+        };
+        workoutUid: string;
+    }[];
     duration: number;
-    exercises: Array<WorkoutExercise>;
+    exercises: WorkoutExercise[];
+    /**
+     * @description
+     * Only if program workout.
+     */
+    fromHistory?: boolean;
     gender: "Male" | "Female" | "UniSex";
     id?: string;
     inspiredTag: string;
     isCore?: boolean;
     isDev?: boolean;
     /**
+     * @deprecated
+     * @description
+     * Only if admin program forked.
+     */
+    originalProgramWorkoutReference?: DocumentReference;
+    /**
+     * @description
+     * Only if admin program forked.
+     */
+    originalProgramWorkoutUid?: string;
+    /**
      * @description
      * Only if trainer assigned the workout.
+     * * Only if program-workout saved.
      */
     originalWorkoutUid?: string;
+    /**
+     * @description
+     * Only if program workout.
+     */
+    parentWorkoutUid?: string;
+    /**
+     * @description
+     * Only if program workout.
+     */
+    programUid?: string;
+    /**
+     * @description
+     * Only if program workout.
+     */
+    start?: number;
     sectionOrder: number;
     sectionUid: string;
     startDate?: number;
@@ -70,6 +153,19 @@ export interface Workout {
     userUid?: string;
     workoutHeaderUrls: Asset;
     workoutNote: string;
+    /**
+     * @description
+     * Only if program workout.
+     */
+    workoutNotes?: {
+        creationDate: {
+            nanoseconds: number;
+            seconds: number;
+        };
+        parentWorkoutUid: string;
+        workoutNote: string;
+        workoutUid: string;
+    }[];
     workoutThumbUrls: Asset;
     workoutType?: string;
     youtubeLink: string;

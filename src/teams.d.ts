@@ -1,5 +1,5 @@
-import { Asset, TeamFile } from './files';
-import { Workout } from './workouts';
+import { Asset, TeamFile } from "./files";
+import { Workout } from "./workouts";
 export interface Team {
     /**
      * @description
@@ -22,7 +22,7 @@ export interface Team {
     };
     instagramTitle: string;
     isDev: boolean;
-    language: 'en' | 'hu';
+    language: "en" | "hu";
     memberUids: string[];
     name: string;
     proSubscriptionItems: string[];
@@ -37,7 +37,7 @@ export interface Team {
             width: number;
         };
         programWorkoutsTileStyle: {
-            tileImageStyle: 'image' | 'svg';
+            tileImageStyle: "image" | "svg";
         };
         secondaryColorStyle: {
             checkBoxColor: string;
@@ -50,14 +50,14 @@ export interface Team {
             width: number;
         };
         teamWorkoutsTileStyle: {
-            tileImageStyle: 'image' | 'svg';
+            tileImageStyle: "image" | "svg";
         };
         welcomeTileStyle: {
-            bellIconColor: '#000000' | '#FFFFFF';
-            dayTimeTextColor: '#000000' | '#FFFFFF';
-            profileIconStyle: 'icon' | 'image';
-            statIconColor: '#000000' | '#FFFFFF';
-            tileStyle: 'small' | 'large' | 'image';
+            bellIconColor: "#000000" | "#FFFFFF";
+            dayTimeTextColor: "#000000" | "#FFFFFF";
+            profileIconStyle: "icon" | "image";
+            statIconColor: "#000000" | "#FFFFFF";
+            tileStyle: "small" | "large" | "image";
             tileImage: Asset;
             backgroundColor: string;
         };
@@ -70,6 +70,10 @@ export interface Team {
     trainerUid: string;
     uid: string;
 }
+/**
+ * @deprecated
+ * 2022.02.24.
+ */
 export interface TeamWorkout extends Workout {
 }
 export interface TeamWorkoutSection {
@@ -147,7 +151,7 @@ export interface TrainerReply {
     userProfilePicture: string | null;
     userUid: string;
 }
-export interface QuestionPost extends Omit<TrainerPost, 'sharedWorkout'> {
+export interface QuestionPost extends Omit<TrainerPost, "sharedWorkout"> {
 }
 export interface QuestionComment extends TrainerComment {
 }
