@@ -62,6 +62,11 @@ export interface WorkoutExercise extends Exercise {
     isExerciseMetric?: boolean;
     isPulse?: boolean;
     note?: string;
+    /**
+     * @description
+     * Only if Workout Log is active.
+     */
+    setEntityIds?: string[];
     superSet?: number;
     tempo?: string;
     trainerNote?: string;
