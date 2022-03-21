@@ -118,7 +118,7 @@ export interface Program {
      * Only for users if they are in challenge mode.
      */
     userChallengeReference?: DocumentReference;
-    workoutsPerWeek?: number;
+    workoutsPerWeek?: string;
 }
 export interface ProgramWithSections extends Program {
     programSections?: Array<ProgramSection>;
