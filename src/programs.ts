@@ -119,6 +119,7 @@ export interface Program {
    * Only for users if they are in challenge mode.
    */
   userChallengeReference?: DocumentReference;
+  workoutsPerWeek?: number;
 }
 
 export interface ProgramWithSections extends Program {
@@ -168,7 +169,6 @@ export interface ProgramWorkout extends Workout {
     workoutNote: string;
     workoutUid: string;
   }>;
-  workoutsPerWeek?: number;
 }
 
 export interface ProgramSection {
