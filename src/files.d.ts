@@ -8,7 +8,7 @@ export interface Asset {
         bucket?: string;
         contentDisposition?: string;
         contentEncoding?: string;
-        contentType: "video/mp4" | "image/jpeg";
+        contentType: 'video/mp4' | 'image/jpeg';
         dimensions?: {
             height: number;
             width: number;

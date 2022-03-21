@@ -1,128 +1,128 @@
-import { DocumentReference } from "@firebase/firestore-types";
-import { Asset } from "./files";
-import { Workout } from "./workouts";
+import {DocumentReference} from '@firebase/firestore-types';
+import {Asset} from './files';
+import {Workout} from './workouts';
 
 export interface Program {
-    /**
-     * @description
-     * Only if program was completed.
-     * Only for users.
-     */
-    completedDate?: {
-        nanoseconds: number;
-        seconds: number;
-    };
-    createdBy: string;
+  /**
+   * @description
+   * Only if program was completed.
+   * Only for users.
+   */
+  completedDate?: {
+    nanoseconds: number;
+    seconds: number;
+  };
+  createdBy: string;
+  creationDate: {
+    nanoseconds: number;
+    seconds: number;
+  };
+  description: string;
+  /**
+   * @description
+   * Only for users.
+   */
+  doneWorkouts?: Array<{
     creationDate: {
-        nanoseconds: number;
-        seconds: number;
+      nanoseconds: number;
+      seconds: number;
     };
-    description: string;
-    /**
-     * @description
-     * Only for users.
-     */
-    doneWorkouts?: Array<{
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        workoutUid: string;
-    }>;
-    /**
-     * @description
-     * Only for users.
-     */
-    doneSections?: Array<{
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        sectionUid: string;
-    }>;
-    /**
-     * @description
-     * Only for users.
-     * Only if user completed the whole program.
-     */
-    endingCondition?: DocumentReference;
-    gender: "Male" | "Female" | "UniSex";
-    /**
-     * @description
-     * Only for users.
-     * Only if user completed the whole program.
-     */
-    isCompleted?: boolean;
-    /**
-     * @description
-     * Only for users.
-     * Only if loaded during a challenge.
-     */
-    isChallengeProgram?: boolean;
-    isCore?: boolean;
-    isDev: boolean;
-    /**
-     * @description
-     * Only if for users if loaded the program.
-     */
-    isLoaded?: boolean;
-    isTemplate: boolean;
-    level: "Grandma" | "Beginner" | "Intermediate" | "Advanced" | "Pro" | "Hulk";
-    location: string;
-    measurementInfo: string;
-    order: number;
-    /**
-     * @description
-     * Only if admin program forked.
-     */
-    originalProgramReference?: DocumentReference;
-    /**
-     * @description
-     * Only if admin program forked or user loaded the program..
-     */
-    originalProgramUid?: string;
-    programCoverUrls: Asset;
-    programHeaderUrls: Asset;
-    programVideoUrls: Asset;
-    reference?: DocumentReference;
-    shortInfo: string;
-    /**
-     * @description
-     * Only for users.
-     * Only if user added the starting condition log.
-     */
-    startingCondition?: DocumentReference;
-    tags: string[];
-    /**
-     * @description
-     * Only for users.
-     * Only if loaded during a challenge.
-     */
-    teamChallengeReference: DocumentReference;
-    /**
-     * @description
-     * Only if teamProgram
-     */
-    teamUid?: string;
-    /**
-     * @description
-     * Only if program is active in any team.
-     */
-    teamUids?: string[];
-    tierLevel: number;
-    title: string;
-    trainerUid: string;
-    type: string;
-    uid: string;
-    /**
-     * @description
-     * Only for users if they are in challenge mode.
-     */
-    userChallengeReference?: DocumentReference;
+    workoutUid: string;
+  }>;
+  /**
+   * @description
+   * Only for users.
+   */
+  doneSections?: Array<{
+    creationDate: {
+      nanoseconds: number;
+      seconds: number;
+    };
+    sectionUid: string;
+  }>;
+  /**
+   * @description
+   * Only for users.
+   * Only if user completed the whole program.
+   */
+  endingCondition?: DocumentReference;
+  gender: 'Male' | 'Female' | 'UniSex';
+  /**
+   * @description
+   * Only for users.
+   * Only if user completed the whole program.
+   */
+  isCompleted?: boolean;
+  /**
+   * @description
+   * Only for users.
+   * Only if loaded during a challenge.
+   */
+  isChallengeProgram?: boolean;
+  isCore?: boolean;
+  isDev: boolean;
+  /**
+   * @description
+   * Only if for users if loaded the program.
+   */
+  isLoaded?: boolean;
+  isTemplate: boolean;
+  level: 'Grandma' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Pro' | 'Hulk';
+  location: string;
+  measurementInfo: string;
+  order: number;
+  /**
+   * @description
+   * Only if admin program forked.
+   */
+  originalProgramReference?: DocumentReference;
+  /**
+   * @description
+   * Only if admin program forked or user loaded the program..
+   */
+  originalProgramUid?: string;
+  programCoverUrls: Asset;
+  programHeaderUrls: Asset;
+  programVideoUrls: Asset;
+  reference?: DocumentReference;
+  shortInfo: string;
+  /**
+   * @description
+   * Only for users.
+   * Only if user added the starting condition log.
+   */
+  startingCondition?: DocumentReference;
+  tags: string[];
+  /**
+   * @description
+   * Only for users.
+   * Only if loaded during a challenge.
+   */
+  teamChallengeReference: DocumentReference;
+  /**
+   * @description
+   * Only if teamProgram
+   */
+  teamUid?: string;
+  /**
+   * @description
+   * Only if program is active in any team.
+   */
+  teamUids?: string[];
+  tierLevel: number;
+  title: string;
+  trainerUid: string;
+  type: string;
+  uid: string;
+  /**
+   * @description
+   * Only for users if they are in challenge mode.
+   */
+  userChallengeReference?: DocumentReference;
 }
 
 export interface ProgramWithSections extends Program {
-    programSections?: Array<ProgramSection>;
+  programSections?: Array<ProgramSection>;
 }
 
 /**
@@ -130,78 +130,79 @@ export interface ProgramWithSections extends Program {
  * 2022.02.24.
  */
 export interface ProgramWorkout extends Workout {
-    doneWorkouts?: Array<{
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        workoutUid: string;
-    }>;
-    fromHistory: boolean;
-    /**
-     * @deprecated
-     * @description
-     * Only if admin program forked.
-     */
-    originalProgramWorkoutReference?: DocumentReference;
-    /**
-     * @description
-     * Only if admin program forked.
-     */
-    originalProgramWorkoutUid?: string;
-    /**
-     * @description
-     * Only if program-workout saved.
-     */
-    originalWorkoutUid?: string;
-    parentWorkoutUid?: string;
-    programUid: string;
-    start?: number;
-    trainerUid: string;
-    userUid: string;
-    workoutNotes: Array<{
-        creationDate: {
-            nanoseconds: number;
-            seconds: number;
-        };
-        parentWorkoutUid: string;
-        workoutNote: string;
-        workoutUid: string;
-    }>;
+  doneWorkouts?: Array<{
+    creationDate: {
+      nanoseconds: number;
+      seconds: number;
+    };
+    workoutUid: string;
+  }>;
+  fromHistory: boolean;
+  /**
+   * @deprecated
+   * @description
+   * Only if admin program forked.
+   */
+  originalProgramWorkoutReference?: DocumentReference;
+  /**
+   * @description
+   * Only if admin program forked.
+   */
+  originalProgramWorkoutUid?: string;
+  /**
+   * @description
+   * Only if program-workout saved.
+   */
+  originalWorkoutUid?: string;
+  parentWorkoutUid?: string;
+  programUid: string;
+  start?: number;
+  trainerUid: string;
+  userUid: string;
+  workoutNotes: Array<{
+    creationDate: {
+      nanoseconds: number;
+      seconds: number;
+    };
+    parentWorkoutUid: string;
+    workoutNote: string;
+    workoutUid: string;
+  }>;
+  workoutsPerWeek?: number;
 }
 
 export interface ProgramSection {
-    creationDate: {
-        nanoseconds: number;
-        seconds: number;
-    };
-    description?: string;
-    order: number;
-    /**
-     * @description
-     * Only if admin program forked.
-     */
-    originalProgramSectionReference?: DocumentReference;
-    /**
-     * @description
-     * Only if admin program forked.
-     */
-    originalProgramSectionUid?: string;
-    programSectionVideoUrls: Asset;
-    programUid: string;
-    sectionTitle: string;
-    trainerUid: string;
-    uid: string;
-    userUid: string;
+  creationDate: {
+    nanoseconds: number;
+    seconds: number;
+  };
+  description?: string;
+  order: number;
+  /**
+   * @description
+   * Only if admin program forked.
+   */
+  originalProgramSectionReference?: DocumentReference;
+  /**
+   * @description
+   * Only if admin program forked.
+   */
+  originalProgramSectionUid?: string;
+  programSectionVideoUrls: Asset;
+  programUid: string;
+  sectionTitle: string;
+  trainerUid: string;
+  uid: string;
+  userUid: string;
 }
 
 export interface ProgramSectionWithWorkouts extends ProgramSection {
-    workouts: Array<ProgramWorkout>;
+  workouts: Array<ProgramWorkout>;
 }
 
 /**@deprecated */
 export interface Tier {
-    key: number;
-    title: string;
-    programs: Array<Program>;
+  key: number;
+  title: string;
+  programs: Array<Program>;
 }

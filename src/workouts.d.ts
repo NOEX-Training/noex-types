@@ -1,6 +1,6 @@
-import { DocumentReference } from "@firebase/firestore-types";
-import { Exercise } from "./exercises";
-import { Asset } from "./files";
+import { DocumentReference } from '@firebase/firestore-types';
+import { Exercise } from './exercises';
+import { Asset } from './files';
 /**
  * @description
  * Workout/Exercise/Set object.
@@ -43,7 +43,7 @@ export interface WorkoutExerciseSet {
      * Only if Workout Log is active.
      */
     setIndex?: number;
-    status: "S" | "F" | "D" | "W" | "T" | "P" | "RP";
+    status: 'S' | 'F' | 'D' | 'W' | 'T' | 'P' | 'RP';
     weight?: number | string;
 }
 export interface WorkoutExercise extends Exercise {
@@ -99,7 +99,7 @@ export interface Workout {
      * Only if program workout.
      */
     fromHistory?: boolean;
-    gender: "Male" | "Female" | "UniSex";
+    gender: 'Male' | 'Female' | 'UniSex';
     id?: string;
     inspiredTag: string;
     isCore?: boolean;
@@ -184,7 +184,7 @@ export interface WorkoutSection {
     userUid: string;
     workouts?: Workout[];
 }
-export interface WorkoutHistory extends Omit<Workout, "exercises"> {
+export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     exercises: Array<WorkoutExercise>;
     isTemplate: boolean;
     originalWorkoutUid: string;
@@ -222,7 +222,7 @@ export interface WorkoutRating {
         seconds: number;
     };
     comment: string;
-    language: "hu" | "en";
+    language: 'hu' | 'en';
     performanceRateValue: number;
     workoutHistoryId: string;
     workoutRateValue: number;

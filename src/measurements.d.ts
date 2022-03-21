@@ -1,4 +1,4 @@
-import { Asset } from "./files";
+import { Asset } from './files';
 export interface Weight {
     key: string;
     value: number;
@@ -45,7 +45,7 @@ export interface WeightLogData {
     photoBack?: Asset;
     photoFront?: Asset;
     photoSide?: Asset;
-    type: "muscle" | "weight";
+    type: 'muscle' | 'weight';
     uid: string;
     userUid: string;
     /**

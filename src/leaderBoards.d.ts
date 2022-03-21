@@ -1,4 +1,4 @@
-import { FirebaseFirestoreTypes } from "@react-native-firebase/firestore";
+import { FirebaseFirestoreTypes } from '@react-native-firebase/firestore';
 export interface TeamLeaderBoard {
     creationDate: FirebaseFirestoreTypes.Timestamp;
     cardioGoal: number;
