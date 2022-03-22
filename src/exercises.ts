@@ -1,3 +1,4 @@
+import {FirebaseFirestoreTypes} from '@react-native-firebase/firestore';
 import {Asset} from './files';
 import {WorkoutExerciseSet} from './workouts';
 
@@ -65,6 +66,7 @@ export interface Exercise {
   title: string;
   titleEn: string;
   uid: string;
+  updateTime?: FirebaseFirestoreTypes.Timestamp;
   womanAssetsUrls?: Array<Asset>;
   womanThumbsUrls: Asset;
   youtubeLinks?: Array<{
