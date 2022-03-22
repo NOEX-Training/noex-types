@@ -66,7 +66,7 @@ export interface Exercise {
   title: string;
   titleEn: string;
   uid: string;
-  updateTime?: FirebaseFirestoreTypes.Timestamp;
+  updateDate?: FirebaseFirestoreTypes.Timestamp;
   womanAssetsUrls?: Array<Asset>;
   womanThumbsUrls: Asset;
   youtubeLinks?: Array<{
