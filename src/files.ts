@@ -1,7 +1,17 @@
+import {FirebaseFirestoreTypes} from '@react-native-firebase/firestore';
+
+export interface Folder {
+  creationDate: FirebaseFirestoreTypes.Timestamp;
+  folderName: string;
+  folderTitle: string;
+  uid: string;
+}
+
 /**
  * @description
  * Uploaded file object.
  */
+
 export interface Asset {
   downloadURL: string;
   fileData: {
