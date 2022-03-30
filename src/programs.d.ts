@@ -2,6 +2,8 @@ import { DocumentReference } from '@firebase/firestore-types';
 import { Asset } from './files';
 import { Workout } from './workouts';
 export interface Program {
+    block?: string;
+    blockUids?: string[];
     /**
      * @description
      * Only if program was completed.
@@ -66,6 +68,7 @@ export interface Program {
      */
     isLoaded?: boolean;
     isTemplate: boolean;
+    language: 'en' | 'hu';
     level: 'Grandma' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Pro' | 'Hulk';
     location: string;
     measurementInfo: string;
