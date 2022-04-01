@@ -1,5 +1,5 @@
 import { Asset } from './files';
-import { DocumentReference } from '@firebase/firestore-types';
+import { DocumentReference } from '@firebase/firestore';
 export interface Ingredient {
     key: string;
     value: {

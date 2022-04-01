@@ -1,4 +1,4 @@
-import { DocumentReference } from '@firebase/firestore-types';
+import { DocumentReference } from '@firebase/firestore';
 import { Asset } from './files';
 import { WeightLogData } from './measurements';
 export interface UserChallenge {

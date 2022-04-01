@@ -1,4 +1,4 @@
-import {DocumentReference} from '@firebase/firestore-types';
+import {DocumentReference} from '@firebase/firestore';
 import {Exercise} from './exercises';
 import {Asset} from './files';
 
