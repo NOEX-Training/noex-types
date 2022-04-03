@@ -46,9 +46,10 @@ export interface Asset {
   key: string;
   mirror?: {
     Bucket: string;
+    ETag: string;
     Key: string;
     Location: string;
-    key: string;
+    key?: string;
   };
   /**
    * @description
