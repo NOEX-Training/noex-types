@@ -16,7 +16,7 @@ export interface Asset {
   downloadURL: string;
   fileData: {
     bucket?: string;
-    contentDisposition?: string;
+    contentDisposition?: string | null;
     contentEncoding?: string;
     contentType: 'video/mp4' | 'image/jpeg';
     dimensions?: {
