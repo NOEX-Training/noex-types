@@ -17,7 +17,7 @@ export interface Asset {
   fileData: {
     bucket?: string;
     contentDisposition?: string | null;
-    contentEncoding?: string;
+    contentEncoding?: string | null;
     contentType: 'video/mp4' | 'image/jpeg';
     dimensions?: {
       height: number;
@@ -25,7 +25,7 @@ export interface Asset {
     };
     fullPath: string;
     generation?: string;
-    md5Hash?: string;
+    md5Hash?: string | null;
     metageneration?: string;
     name: string;
     size: number;
