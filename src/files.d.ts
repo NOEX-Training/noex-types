@@ -26,7 +26,7 @@ export interface Asset {
         metageneration?: string;
         name: string;
         size: number;
-        creationDate: string;
+        timeCreated: string;
         type?: string;
         updated?: string;
     };
