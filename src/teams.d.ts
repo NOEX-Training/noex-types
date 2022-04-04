@@ -24,6 +24,11 @@ export interface Team {
     isDev: boolean;
     language: 'en' | 'hu';
     memberUids: string[];
+    monthlyStats?: {
+        income: number;
+        leavers: number;
+        subscribers: number;
+    };
     name: string;
     proSubscriptionItems: string[];
     eliteSubscriptionItems: string[];
