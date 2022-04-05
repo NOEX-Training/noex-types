@@ -2,8 +2,11 @@ import { DocumentReference } from '@firebase/firestore';
 import { Asset } from './files';
 import { Workout } from './workouts';
 export interface Program {
-    block?: string;
-    blockUids?: string[];
+    /**
+     * @description
+     * Only if the program is in block.
+     */
+    blockUid?: string;
     /**
      * @description
      * Only if program was completed.
@@ -202,4 +205,15 @@ export interface Tier {
     key: number;
     title: string;
     programs: Array<Program>;
+}
+export interface ProgramBlock {
+    creationDate: {
+        nanoseconds: number;
+        seconds: number;
+    };
+    language: 'en' | 'hu';
+    location: 'gym' | 'home';
+    programUids: string[];
+    title: string;
+    uid: string;
 }
