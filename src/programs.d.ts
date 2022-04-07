@@ -213,6 +213,7 @@ export interface ProgramBlock {
         seconds: number;
     };
     description: string;
+    gradientColor: string;
     language: 'en' | 'hu';
     location: 'gym' | 'home';
     programUids: string[];
