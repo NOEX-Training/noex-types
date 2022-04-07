@@ -5,9 +5,9 @@ import {Workout} from './workouts';
 export interface Program {
   /**
    * @description
-   * Only if the program is in block.
+   * Only if the program is in container.
    */
-  blockUid?: string;
+  containerUid?: string;
   /**
    * @description
    * Only if program was completed.
@@ -213,14 +213,14 @@ export interface Tier {
   programs: Array<Program>;
 }
 
-export interface ProgramBlock {
+export interface ProgramContainer {
+  blockUids: string[];
   creationDate: {
     nanoseconds: number;
     seconds: number;
   };
   language: 'en' | 'hu';
   location: 'gym' | 'home';
-  programUids: string[];
   title: string;
   uid: string;
 }
