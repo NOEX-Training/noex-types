@@ -219,6 +219,7 @@ export interface ProgramBlock {
     nanoseconds: number;
     seconds: number;
   };
+  description: string;
   language: 'en' | 'hu';
   location: 'gym' | 'home';
   programUids: string[];
