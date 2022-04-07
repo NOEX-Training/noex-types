@@ -6,7 +6,7 @@ export interface Program {
      * @description
      * Only if the program is in container.
      */
-    containerUid?: string;
+    blockUid?: string;
     /**
      * @description
      * Only if program was completed.
@@ -206,14 +206,14 @@ export interface Tier {
     title: string;
     programs: Array<Program>;
 }
-export interface ProgramContainer {
-    blockUids: string[];
+export interface ProgramBlock {
     creationDate: {
         nanoseconds: number;
         seconds: number;
     };
     language: 'en' | 'hu';
     location: 'gym' | 'home';
+    programUids: string[];
     title: string;
     uid: string;
 }
