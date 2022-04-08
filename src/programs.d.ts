@@ -215,6 +215,7 @@ export interface ProgramBlock {
     description: string;
     gradientColor: string;
     language: 'en' | 'hu';
+    level: 'Grandma' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Pro' | 'Hulk';
     location: 'gym' | 'home';
     programUids: string[];
     title: string;
