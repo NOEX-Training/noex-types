@@ -5,6 +5,11 @@ import {Workout} from './workouts';
 export interface Program {
   /**
    * @description
+   * Average time for workouts.
+   */
+  averageWorkoutDuration?: string;
+  /**
+   * @description
    * Only if the program is in container.
    */
   blockUid?: string;
@@ -163,6 +168,7 @@ export interface ProgramWorkout extends Workout {
   originalWorkoutUid?: string;
   parentWorkoutUid?: string;
   programUid: string;
+  programType?: string;
   start?: number;
   trainerUid: string;
   userUid: string;
