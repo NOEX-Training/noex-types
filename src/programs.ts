@@ -94,6 +94,7 @@ export interface Program {
   originalProgramUid?: string;
   programCoverUrls: Asset;
   programHeaderUrls: Asset;
+  programType?: string;
   programVideoUrls: Asset;
   reference?: DocumentReference;
   shortInfo: string;
@@ -168,7 +169,6 @@ export interface ProgramWorkout extends Workout {
   originalWorkoutUid?: string;
   parentWorkoutUid?: string;
   programUid: string;
-  programType?: string;
   start?: number;
   trainerUid: string;
   userUid: string;
