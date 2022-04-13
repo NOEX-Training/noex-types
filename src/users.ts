@@ -99,6 +99,12 @@ export interface User {
    */
   methods?: string[];
   muscleGainValue: number;
+  /**
+   * @description
+   * Check the loaded programs per monthy.
+   * Default 0. Max value 2.
+   */
+  monthlyLoadedProgram?: number;
   name: string;
   statistics?: {
     /**
