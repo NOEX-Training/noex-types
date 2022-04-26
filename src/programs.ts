@@ -220,7 +220,7 @@ export interface Tier {
 }
 
 export interface ProgramBlock {
-  blockCoverUrls: Asset;
+  blockCoverUrls?: Asset;
   creationDate: {
     nanoseconds: number;
     seconds: number;

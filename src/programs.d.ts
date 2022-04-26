@@ -213,7 +213,7 @@ export interface Tier {
     programs: Array<Program>;
 }
 export interface ProgramBlock {
-    blockCoverUrls: Asset;
+    blockCoverUrls?: Asset;
     creationDate: {
         nanoseconds: number;
         seconds: number;
