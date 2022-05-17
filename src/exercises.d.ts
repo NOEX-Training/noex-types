@@ -10,6 +10,11 @@ export interface Exercise {
         seconds: number;
         nanoseconds: number;
     };
+    /**
+     * @description
+     * Only if user added the exercise.
+     */
+    description?: string;
     dmgAbductor: number;
     dmgAbs: number;
     dmgAdductor: number;
@@ -68,6 +73,11 @@ export interface Exercise {
     updateDate?: FirebaseFirestoreTypes.Timestamp;
     womanAssetsUrls?: Array<Asset>;
     womanThumbsUrls: Asset;
+    /**
+     * @description
+     * Only if user addded the exercise.
+     */
+    youtubeLink?: string;
     youtubeLinks?: Array<{
         link?: string;
         start?: string;
