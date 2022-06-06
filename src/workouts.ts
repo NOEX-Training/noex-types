@@ -79,10 +79,12 @@ export interface Workout {
   blueprintTag: string;
   categoryUid?: string;
   createdBy: string;
-  creationDate: {
-    nanoseconds: number;
-    seconds: number;
-  };
+  /**
+   * @description
+   * Changed to Epoch Time in milliseconds.
+   * Date: 2022.06.05.
+   */
+  creationDate: number;
   description?: string;
   /**
    * @description
@@ -107,6 +109,7 @@ export interface Workout {
   inspiredTag: string;
   isCore?: boolean;
   isDev?: boolean;
+  isTemplate: boolean;
   /**
    * @deprecated
    * @description
@@ -136,11 +139,16 @@ export interface Workout {
   programUid?: string;
   /**
    * @description
+   * @deprecated
    * Only if program workout.
    */
   start?: number;
   sectionOrder: number;
   sectionUid: string;
+  /**
+   * @description
+   * When the user started the workout.
+   */
   startDate?: number;
   tags: string[];
   /**

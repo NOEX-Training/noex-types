@@ -56,7 +56,7 @@ export interface User {
     };
   };
   fatLossValue: number;
-  gender: 'Male' | 'Female';
+  gender: 'Male' | 'Female' | 'UniSex';
   goal: Array<{
     key: string;
     text: string;
