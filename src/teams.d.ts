@@ -11,6 +11,13 @@ export interface Team {
         code: string;
         isChallengeActive: boolean;
         isRegistrationPeriodActive?: boolean;
+        /**
+         * @description
+         * For the fast count of unseen messages.
+         */
+        messages: {
+            [key: string]: number;
+        };
         startDate: {
             nanoseconds: number;
             seconds: number;

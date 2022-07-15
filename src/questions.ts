@@ -1,6 +1,11 @@
 import {Asset, TeamFile} from './files';
 
 export interface Post {
+  /**
+   * @description
+   * For fast calculation of comments in posts.
+   */
+  comments: number;
   creationDate: {
     nanoseconds: number;
     seconds: number;
