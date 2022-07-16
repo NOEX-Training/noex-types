@@ -50,14 +50,14 @@ export interface Exercise {
   levelType: string;
   mainMuscleType: string;
   maleOpen: number;
-  manAssetsUrls?: Array<Asset>;
+  manAssetsUrls?: Asset[];
   manThumbsUrls: Asset;
   muscleManThumbsUrls: Asset;
   muscleWomanThumbsUrls: Asset;
   mechanismType: string;
   movementType: string;
-  posterImagesMan?: Array<Asset>;
-  posterImagesWoman?: Array<Asset>;
+  posterImagesMan?: Asset[];
+  posterImagesWoman?: Asset[];
   setType: 'WRR' | 'RR' | 'DR';
   shortInfo: string;
   shortInfoEn: string;
@@ -72,17 +72,17 @@ export interface Exercise {
   titleEn: string;
   uid: string;
   updateDate?: FirebaseFirestoreTypes.Timestamp;
-  womanAssetsUrls?: Array<Asset>;
+  womanAssetsUrls?: Asset[];
   womanThumbsUrls: Asset;
   /**
    * @description
    * Only if user addded the exercise.
    */
   youtubeLink?: string;
-  youtubeLinks?: Array<{
+  youtubeLinks?: {
     link?: string;
     start?: string;
-  }>;
+  }[];
 }
 
 export interface ExerciseDescriptionElement {
@@ -93,8 +93,8 @@ export interface ExerciseDescriptionElement {
   text?: string;
   richText?: string;
   url?: string;
-  youtubeLinks?: Array<ExerciseYoutubeLink>;
-  images?: Array<Asset>;
+  youtubeLinks?: ExerciseYoutubeLink[];
+  images?: Asset[];
 }
 
 /**
@@ -107,11 +107,12 @@ export interface ExerciseHistory {
     seconds: number;
   };
   exerciseNote?: string;
-  exerciseSets: Array<WorkoutExerciseSet>;
+  exerciseSets: WorkoutExerciseSet[];
   exerciseUid: string;
   uid: string;
   userUid: string;
   workoutUid: string;
+  workoutTitle: string;
 }
 
 /**
