@@ -106,6 +106,23 @@ export interface User {
    */
   monthlyLoadedProgram?: number;
   name: string;
+  /**
+   * @description
+   * Notification settings for the user.
+   */
+  notificationSettings: {
+    getMessage: boolean;
+    getCommentOnPost: boolean;
+    getReplyOnComment: boolean;
+    getLike: boolean;
+    newPost: boolean;
+    newTrainerPost: boolean;
+    restTimeIsOver: boolean;
+    workoutIsOver: boolean;
+    newProgramIsPublished: boolean;
+    newGuideIsPublished: boolean;
+    newRecipeIsPublished: boolean;
+  };
   statistics?: {
     /**
      * @description
