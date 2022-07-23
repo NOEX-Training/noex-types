@@ -236,7 +236,7 @@ export interface WorkoutRating {
     workoutRateValue: number;
     workoutUid: string;
     uid: string;
-    userReference: any;
+    userReference: string;
     userProfilePicture: string;
     userUid: string;
 }

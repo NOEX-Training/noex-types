@@ -55,6 +55,16 @@ export interface User {
         };
     };
     fatLossValue: number;
+    /**
+     * @description
+     * The number of the followers the user has in the community module.
+     */
+    followersCount?: number;
+    /**
+     * @description
+     * The number of the following the user has in the community module.
+     */
+    followingCount?: number;
     gender: 'Male' | 'Female' | 'UniSex';
     goal: Array<{
         key: string;
@@ -234,6 +244,11 @@ export interface User {
     trainerUid?: string;
     uid: string;
     weight: number;
+    /**
+     * @description
+     * Done workout histories for community on the profile screen.
+     */
+    workoutsCount?: number;
     workoutsLast7Days?: number;
     workoutsLast30Days?: number;
 }
