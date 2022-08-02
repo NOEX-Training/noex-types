@@ -198,6 +198,7 @@ export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
     originalWorkoutUid: string;
     /**@deprecated */
     start: number;
+    performanceRateComment?: string;
     performanceRateValue: number;
 }
 export interface Dmg {
@@ -236,6 +237,10 @@ export interface WorkoutRating {
     workoutRateValue: number;
     workoutUid: string;
     uid: string;
+    /**
+     * @deprecated
+     * 2022.08.02.
+     */
     userReference: string;
     userProfilePicture: string;
     userUid: string;

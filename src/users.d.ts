@@ -218,6 +218,7 @@ export interface User {
         isActive: boolean;
         tierLevel: number;
     };
+    teamName?: string;
     teamUid?: string;
     /**
      * @description
