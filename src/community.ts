@@ -4,7 +4,7 @@ import {Dmg} from './workouts';
 export type PostWorkoutHistory = {
   creationDate: number;
   duration: number;
-  starDate: number;
+  startDate: number;
   title: string;
   workoutHistoryUid: string;
 } & Dmg;
