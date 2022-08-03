@@ -1,3 +1,4 @@
+import {Asset} from './files';
 import {Dmg} from './workouts';
 
 export type PostWorkoutHistory = {
@@ -25,7 +26,7 @@ export type FollowedFeedPost<T extends PostType> = {
   creationDate: number;
   creator: string;
   creatorGender: 'Male' | 'Female';
-  creatorPhoto: string;
+  creatorPhoto: Asset;
   creatorUid: string;
   isPublic: boolean;
   postUid: string;
