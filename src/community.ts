@@ -1,36 +1,23 @@
+import {Dmg} from './workouts';
+
 export type PostWorkoutHistory = {
   creationDate: number;
-  dmgAbs: number;
-  dmgAdductor: number;
-  dmgAbductor: number;
-  dmgBiceps: number;
-  dmgCore: number;
-  dmgCalves: number;
-  dmgForearms: number;
-  dmgFrontDelt: number;
-  dmgGlutes: number;
-  dmgHamstrings: number;
-  dmgLats: number;
-  dmgLowerBack: number;
-  dmgLowerChest: number;
-  dmgNeck: number;
-  dmgObliques: number;
-  dmgQuads: number;
-  dmgRearDelt: number;
-  dmgRotatorCuff: number;
-  dmgSideDelt: number;
-  dmgTriceps: number;
-  dmgUpperBack: number;
-  dmgUpperChest: number;
   duration: number;
   starDate: number;
   title: string;
   workoutHistoryUid: string;
-};
+} & Dmg;
 
-export type PostType = 'workoutHistory';
+export type PostProgramStarted = {};
+export type PostProgramFinished = {};
+
+export type PostType = 'programFinished' | 'programStarted' | 'workoutHistory';
 export type PostContent<T> = T extends 'workoutHistory'
   ? PostWorkoutHistory
+  : T extends 'programFinished'
+  ? PostProgramFinished
+  : T extends 'programStarted'
+  ? PostProgramStarted
   : never;
 
 export type FollowedFeedPost<T extends PostType> = {

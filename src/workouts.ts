@@ -204,10 +204,21 @@ export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
   /**@deprecated */
   start: number;
   performanceRateComment?: string;
+  /**
+   * @deprecated
+   * 2022.08.03. this moved to the workout status field.
+   */
   performanceRateValue: number;
+  /**
+   * @description
+   * Only from 2022.08.03.
+   * The records will be saved in a standalone collection,
+   * because will be used on the followed feed.
+   */
+  prsReference?: string;
 }
 
-export interface Dmg {
+export type Dmg = {
   dmgAbs: number;
   dmgAdductor: number;
   dmgAbductor: number;
@@ -230,7 +241,7 @@ export interface Dmg {
   dmgTriceps: number;
   dmgUpperBack: number;
   dmgUpperChest: number;
-}
+};
 
 export interface WorkoutRating {
   creationDate: {
