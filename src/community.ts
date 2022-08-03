@@ -20,8 +20,8 @@ export type PostContent<T> = T extends 'workoutHistory'
   ? PostProgramStarted
   : never;
 
-export type FollowedFeedPost<T extends PostType> = {
-  content: PostContent<T>;
+export type FollowedFeedPost = {
+  content: PostContent<PostType>;
   creationDate: number;
   creator: string;
   creatorGender: 'Male' | 'Female';
