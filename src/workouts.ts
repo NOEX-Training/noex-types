@@ -291,7 +291,7 @@ export interface Cardio {
   uid: string;
 }
 
-export type PrivateRecord = {
+export type RecordElement = {
   exerciseId: string;
   rm: number;
   duration: number;
@@ -307,4 +307,13 @@ export type PrivateRecord = {
     | 'weight-volumen'
     | 'reps-volumen'
     | 'weight-reps-volumen';
+};
+
+export type PrivateRecord = {
+  creationDate: number;
+  records: RecordElement[];
+  uid: string;
+  userUid: string;
+  workoutHistoryUid: string;
+  workoutHistoryReference: string;
 };

@@ -282,7 +282,7 @@ export interface Cardio {
     type: string;
     uid: string;
 }
-export declare type PrivateRecord = {
+export declare type RecordElement = {
     exerciseId: string;
     rm: number;
     duration: number;
@@ -291,4 +291,12 @@ export declare type PrivateRecord = {
     weight: number;
     setEntityId: string;
     type: 'reps' | 'volumen' | 'weight' | 'weight-reps' | 'weight-volumen' | 'reps-volumen' | 'weight-reps-volumen';
+};
+export declare type PrivateRecord = {
+    creationDate: number;
+    records: RecordElement[];
+    uid: string;
+    userUid: string;
+    workoutHistoryUid: string;
+    workoutHistoryReference: string;
 };
