@@ -198,11 +198,20 @@ export interface WorkoutSection {
 }
 
 export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
-  exercises: Array<WorkoutExercise>;
+  exercises: WorkoutExercise[];
   isTemplate: boolean;
   originalWorkoutUid: string;
   /**@deprecated */
   start: number;
+  /**
+   * @description
+   * Emotion key for workout performance status.
+   */
+  performanceEmotionKey?: string;
+  /**
+   * @description
+   * Only if the users wrote some rate about their the performance
+   */
   performanceRateComment?: string;
   /**
    * @deprecated
@@ -250,6 +259,9 @@ export interface WorkoutRating {
   };
   comment: string;
   language: 'hu' | 'en';
+  /**
+   * @deprecated
+   */
   performanceRateValue: number;
   workoutHistoryId: string;
   workoutRateValue: number;
@@ -278,3 +290,5 @@ export interface Cardio {
   type: string;
   uid: string;
 }
+
+export type PrivateRecord = {};
