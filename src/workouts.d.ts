@@ -282,4 +282,13 @@ export interface Cardio {
     type: string;
     uid: string;
 }
-export declare type PrivateRecord = {};
+export declare type PrivateRecord = {
+    exerciseId: string;
+    rm: number;
+    duration: number;
+    reps: number;
+    volumen: number;
+    weight: number;
+    setEntityId: string;
+    type: 'reps' | 'volumen' | 'weight' | 'weight-reps' | 'weight-volumen' | 'reps-volumen' | 'weight-reps-volumen';
+};

@@ -291,4 +291,20 @@ export interface Cardio {
   uid: string;
 }
 
-export type PrivateRecord = {};
+export type PrivateRecord = {
+  exerciseId: string;
+  rm: number;
+  duration: number;
+  reps: number;
+  volumen: number;
+  weight: number;
+  setEntityId: string;
+  type:
+    | 'reps'
+    | 'volumen'
+    | 'weight'
+    | 'weight-reps'
+    | 'weight-volumen'
+    | 'reps-volumen'
+    | 'weight-reps-volumen';
+};

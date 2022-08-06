@@ -3,9 +3,14 @@ import { Dmg } from './workouts';
 export declare type PostWorkoutHistory = {
     creationDate: number;
     duration: number;
+    performanceEmotionKey: string;
+    performanceRateComment: string;
+    prs: any[];
     startDate: number;
     title: string;
     workoutHistoryUid: string;
+    workoutRateComment: string;
+    workoutRateValue: number;
 } & Dmg;
 export declare type PostProgramStarted = {};
 export declare type PostProgramFinished = {};
