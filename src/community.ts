@@ -1,12 +1,12 @@
 import {Asset} from './files';
-import {Dmg} from './workouts';
+import {Dmg, RecordElement} from './workouts';
 
 export type PostWorkoutHistory = {
   creationDate: number;
   duration: number;
   performanceEmotionKey: string;
   performanceRateComment: string;
-  prs: any[];
+  prs: RecordElement[];
   startDate: number;
   title: string;
   workoutHistoryUid: string;
