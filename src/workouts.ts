@@ -292,13 +292,13 @@ export interface Cardio {
 }
 
 export type RecordElement = {
-  exerciseId: string;
+  exerciseUid: string;
   rm: number;
   duration: number;
   reps: number;
   volumen: number;
   weight: number;
-  setEntityId: string;
+  setEntityId?: string;
   type:
     | 'reps'
     | 'volumen'
