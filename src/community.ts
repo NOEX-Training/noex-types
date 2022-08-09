@@ -14,16 +14,36 @@ export type PostWorkoutHistory = {
   workoutRateValue: number;
 } & Dmg;
 
-export type PostProgramStarted = {};
-export type PostProgramFinished = {};
+export type PostProgramBlockStarted = {
+  averageWorkoutDuration: string;
+  blockCoverUrls: Asset;
+  /**
+   * @description
+   * The whole program's uid.
+   */
+  blockUid: string;
+  creationDate: number;
+  programCoverUrls: Asset;
+  programType: string;
+  /**
+   * @description
+   * The block's uid of the program.
+   */
+  programUid: string;
+  workoutsPerWeek: string;
+};
+export type PostProgramBlockFinished = {};
 
-export type PostType = 'programFinished' | 'programStarted' | 'workoutHistory';
+export type PostType =
+  | 'programBlockFinished'
+  | 'programBlockStarted'
+  | 'workoutHistory';
 export type PostContent<T> = T extends 'workoutHistory'
   ? PostWorkoutHistory
-  : T extends 'programFinished'
-  ? PostProgramFinished
-  : T extends 'programStarted'
-  ? PostProgramStarted
+  : T extends 'programBlockFinished'
+  ? PostProgramBlockFinished
+  : T extends 'programBlockStarted'
+  ? PostProgramBlockStarted
   : never;
 
 export type FollowedFeedPost<T extends PostType> = {

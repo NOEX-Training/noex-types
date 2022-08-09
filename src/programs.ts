@@ -134,55 +134,6 @@ export interface Program {
   workoutsPerWeek?: string;
 }
 
-export interface ProgramWithSections extends Program {
-  programSections?: Array<ProgramSection>;
-}
-
-/**
- * @deprecated
- * 2022.02.24.
- */
-export interface ProgramWorkout extends Workout {
-  doneWorkouts?: Array<{
-    creationDate: {
-      nanoseconds: number;
-      seconds: number;
-    };
-    workoutUid: string;
-  }>;
-  fromHistory: boolean;
-  /**
-   * @deprecated
-   * @description
-   * Only if admin program forked.
-   */
-  originalProgramWorkoutReference?: DocumentReference;
-  /**
-   * @description
-   * Only if admin program forked.
-   */
-  originalProgramWorkoutUid?: string;
-  /**
-   * @description
-   * Only if program-workout saved.
-   */
-  originalWorkoutUid?: string;
-  parentWorkoutUid?: string;
-  programUid: string;
-  start?: number;
-  trainerUid: string;
-  userUid: string;
-  workoutNotes: Array<{
-    creationDate: {
-      nanoseconds: number;
-      seconds: number;
-    };
-    parentWorkoutUid: string;
-    workoutNote: string;
-    workoutUid: string;
-  }>;
-}
-
 export interface ProgramSection {
   creationDate: {
     nanoseconds: number;
@@ -209,14 +160,7 @@ export interface ProgramSection {
 }
 
 export interface ProgramSectionWithWorkouts extends ProgramSection {
-  workouts: Array<ProgramWorkout>;
-}
-
-/**@deprecated */
-export interface Tier {
-  key: number;
-  title: string;
-  programs: Array<Program>;
+  workouts: Workout[];
 }
 
 export interface ProgramBlock {
