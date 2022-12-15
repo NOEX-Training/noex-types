@@ -1,6 +1,6 @@
 {
   "name": "noex-types",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.ts",
   "types": "index.d.ts",
   "repository": "https://github.com/dancixx/-types-noex",

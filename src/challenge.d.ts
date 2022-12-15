@@ -2,19 +2,13 @@ import { DocumentReference } from '@firebase/firestore';
 import { Asset } from './files';
 import { WeightLogData } from './measurements';
 export interface UserChallenge {
-    creationDate: {
-        nanoseconds: number;
-        seconds: number;
-    };
+    creationDate: number;
     email: string;
     /**
      * @description
      * Only if challenge was closed.
      */
-    endDate?: {
-        nanoseconds: number;
-        seconds: number;
-    };
+    endDate?: number;
     /**
      * @description
      * Only if user checked in to the challenge.
