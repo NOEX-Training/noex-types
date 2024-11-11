@@ -1,6 +1,6 @@
 import { Asset } from './files';
 import { Dmg, RecordElement } from './workouts';
-export declare type PostWorkoutHistory = {
+export type PostWorkoutHistory = {
     creationDate: number;
     duration: number;
     performanceEmotionKey: string;
@@ -12,7 +12,7 @@ export declare type PostWorkoutHistory = {
     workoutRateComment: string;
     workoutRateValue: number;
 } & Dmg;
-export declare type PostProgramBlockStarted = {
+export type PostProgramBlockStarted = {
     averageWorkoutDuration: string;
     blockCoverUrls: Asset;
     /**
@@ -30,10 +30,10 @@ export declare type PostProgramBlockStarted = {
     programUid: string;
     workoutsPerWeek: string;
 };
-export declare type PostProgramBlockFinished = {};
-export declare type PostType = 'programBlockFinished' | 'programBlockStarted' | 'workoutHistory';
-export declare type PostContent<T> = T extends 'workoutHistory' ? PostWorkoutHistory : T extends 'programBlockFinished' ? PostProgramBlockFinished : T extends 'programBlockStarted' ? PostProgramBlockStarted : never;
-export declare type FollowedFeedPost<T extends PostType> = {
+export type PostProgramBlockFinished = {};
+export type PostType = 'programBlockFinished' | 'programBlockStarted' | 'workoutHistory';
+export type PostContent<T> = T extends 'workoutHistory' ? PostWorkoutHistory : T extends 'programBlockFinished' ? PostProgramBlockFinished : T extends 'programBlockStarted' ? PostProgramBlockStarted : never;
+export type FollowedFeedPost<T extends PostType> = {
     content: PostContent<T>;
     creationDate: number;
     creator: string;

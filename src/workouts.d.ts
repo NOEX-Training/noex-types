@@ -221,7 +221,7 @@ export interface WorkoutHistory extends Omit<Workout, 'exercises'> {
      */
     prsReference?: string;
 }
-export declare type Dmg = {
+export type Dmg = {
     dmgAbs: number;
     dmgAdductor: number;
     dmgAbductor: number;
@@ -282,7 +282,7 @@ export interface Cardio {
     type: string;
     uid: string;
 }
-export declare type RecordElement = {
+export type RecordElement = {
     exerciseUid: string;
     rm: number;
     duration: number;
@@ -292,7 +292,7 @@ export declare type RecordElement = {
     setEntityId?: string;
     type: 'reps' | 'volumen' | 'weight' | 'weight-reps' | 'weight-volumen' | 'reps-volumen' | 'weight-reps-volumen';
 };
-export declare type PrivateRecord = {
+export type PrivateRecord = {
     creationDate: number;
     records: RecordElement[];
     uid: string;

@@ -1,5 +1,5 @@
-import { Asset } from './files';
 import { DocumentReference } from '@firebase/firestore';
+import { Asset } from './files';
 export interface Ingredient {
     key: string;
     value: {
@@ -61,4 +61,5 @@ export interface Recipe {
         trainerUid: string;
     };
     uid: string;
+    isPublished: boolean;
 }
